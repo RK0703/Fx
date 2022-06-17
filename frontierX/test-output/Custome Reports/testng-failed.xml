@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="2" name="Failed suite [Custome Reports]" guice-stage="DEVELOPMENT" verbose="5">
+  <test thread-count="2" parallel="classes" name="Single Test Suite(failed)" verbose="5">
+    <parameter name="user" value="user"/>
+    <parameter name="enivironment" value="prod"/>
+    <classes>
+      <class name="com.frontierX.TestScripts.VerifyECGSyncTest">
+        <methods>
+          <include name="VerifyECGSyncIsSuccessfull" invocation-numbers="0"/>
+          <include name="setName"/>
+        </methods>
+      </class> <!-- com.frontierX.TestScripts.VerifyECGSyncTest -->
+    </classes>
+  </test> <!-- Single Test Suite(failed) -->
+</suite> <!-- Failed suite [Custome Reports] -->

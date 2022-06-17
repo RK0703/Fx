@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [User - Smoke Tests in STAGING]" guice-stage="DEVELOPMENT">
+  <parameter name="password" value="12341234"/>
+  <parameter name="emailID" value="ravikiran@fourthfrontier.com"/>
+  <parameter name="user" value="user"/>
+  <parameter name="enivironment" value="staging"/>
+  <listeners>
+    <listener class-name="com.frontierX.Utilities.CustomReport"/>
+    <listener class-name="com.frontierX.Utilities.TestNameListener"/>
+  </listeners>
+  <test thread-count="5" name="Smoke Tests - User Prespective(failed)">
+    <classes>
+      <class name="com.frontierX.TestScripts.ActivitySync">
+        <methods>
+          <include name="VerifyActivitySync" invocation-numbers="0"/>
+          <include name="setName"/>
+        </methods>
+      </class> <!-- com.frontierX.TestScripts.ActivitySync -->
+      <class name="com.frontierX.TestScripts.VerifyECGSync">
+        <methods>
+          <include name="setName"/>
+          <include name="ECGSync" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.frontierX.TestScripts.VerifyECGSync -->
+    </classes>
+  </test> <!-- Smoke Tests - User Prespective(failed) -->
+</suite> <!-- Failed suite [User - Smoke Tests in STAGING] -->

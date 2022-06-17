@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Smoke Tests (1)]" guice-stage="DEVELOPMENT">
+  <parameter name="password" value="automation4f"/>
+  <parameter name="emailID" value="premium@fourthfrontier.com"/>
+  <parameter name="user" value="premium"/>
+  <parameter name="enivironment" value="staging"/>
+  <listeners>
+    <listener class-name="com.frontierX.Utilities.CustomReport"/>
+    <listener class-name="com.frontierX.Utilities.TestNameListener"/>
+  </listeners>
+  <test thread-count="5" name="Smoke Tests - Premium user Prespective(failed)">
+    <classes>
+      <class name="com.frontierX.TestScripts.LiveECGs">
+        <methods>
+          <include name="liveECG" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.frontierX.TestScripts.LiveECGs -->
+      <class name="com.frontierX.TestScripts.EditActivity">
+        <methods>
+          <include name="editActivity" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.frontierX.TestScripts.EditActivity -->
+      <class name="com.frontierX.TestScripts.LiveUserDashboard">
+        <methods>
+          <include name="liveUserDashboard" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.frontierX.TestScripts.LiveUserDashboard -->
+      <class name="com.frontierX.TestScripts.GenerateECGPDF">
+        <methods>
+          <include name="generateECGPDF" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.frontierX.TestScripts.GenerateECGPDF -->
+      <class name="com.frontierX.TestScripts.DownloadFIT">
+        <methods>
+          <include name="downloadFIT" invocation-numbers="0"/>
+          <include name="setName"/>
+        </methods>
+      </class> <!-- com.frontierX.TestScripts.DownloadFIT -->
+    </classes>
+  </test> <!-- Smoke Tests - Premium user Prespective(failed) -->
+</suite> <!-- Failed suite [Smoke Tests (1)] -->

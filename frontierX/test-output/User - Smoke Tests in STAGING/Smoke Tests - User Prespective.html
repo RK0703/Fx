@@ -1,0 +1,114 @@
+<html>
+<head>
+<title>TestNG:  Smoke Tests - User Prespective</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Smoke Tests - User Prespective</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>7/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Mon Jan 10 15:28:44 IST 2022</td>
+</tr>
+<tr><td>Total time:</td><td>185 seconds (185270 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.frontierX.TestScripts.TrainingLoad.VerifyTrainingLoad()'><b>VerifyTrainingLoad</b><br>Test class: com.frontierX.TestScripts.TrainingLoad (VerifyTrainingLoad)<br>Test method: Purpose of this test is to Verify When User syncs his activity , his trainig load should not be zero<br>Parameters: staging, user</td>
+<td></td>
+<td>22</td>
+<td>com.frontierX.TestScripts.TrainingLoad@4082ba93</td></tr>
+<tr>
+<td title='com.frontierX.TestScripts.TestHomePageActions.testHomePageActions()'><b>testHomePageActions</b><br>Test class: com.frontierX.TestScripts.TestHomePageActions (testHomePageActions)<br>Parameters: staging, user</td>
+<td></td>
+<td>28</td>
+<td>com.frontierX.TestScripts.TestHomePageActions@4a003cbe</td></tr>
+<tr>
+<td title='com.frontierX.TestScripts.ActivitySync.VerifyActivitySync()'><b>VerifyActivitySync</b><br>Test class: com.frontierX.TestScripts.ActivitySync (VerifyActivitySync)<br>Test method: Purpose of this test is to Verify that User can Sync his activity and it is being displayed<br>Parameters: staging, user</td>
+<td></td>
+<td>16</td>
+<td>com.frontierX.TestScripts.ActivitySync@496bc455</td></tr>
+<tr>
+<td title='com.frontierX.TestScripts.UserType.testHomePageActions()'><b>testHomePageActions</b><br>Test class: com.frontierX.TestScripts.UserType (testHomePageActions)<br>Parameters: staging, user</td>
+<td></td>
+<td>15</td>
+<td>com.frontierX.TestScripts.UserType@17fc391b</td></tr>
+<tr>
+<td title='com.frontierX.TestScripts.VerifyEditActivity.VerifyEditedActivity()'><b>VerifyEditedActivity</b><br>Test class: com.frontierX.TestScripts.VerifyEditActivity (VerifyEditedActivity)<br>Test method: Purpose of this test is to Verify that User can Edit the Activity and save it<br>Parameters: staging, user</td>
+<td></td>
+<td>30</td>
+<td>com.frontierX.TestScripts.VerifyEditActivity@5ddeb7cb</td></tr>
+<tr>
+<td title='com.frontierX.TestScripts.DeleteActivity.deleteActivity()'><b>deleteActivity</b><br>Test class: com.frontierX.TestScripts.DeleteActivity (deleteActivity)<br>Test method: Purpose of this test is to Verify that User can Delete the activity - But here i'm not deleting it , just checking if he can do so<br>Parameters: staging, user</td>
+<td></td>
+<td>55</td>
+<td>com.frontierX.TestScripts.DeleteActivity@3a7442c7</td></tr>
+<tr>
+<td title='com.frontierX.TestScripts.VerifyECGSync.ECGSync()'><b>ECGSync</b><br>Test class: com.frontierX.TestScripts.VerifyECGSync (ECGSync)<br>Test method: Purpose of this test is to Verify that ECG has been synced and Green Tick mark is visble <br>Parameters: staging, user</td>
+<td></td>
+<td>16</td>
+<td>com.frontierX.TestScripts.VerifyECGSync@70ed52de</td></tr>
+</table><p>
+</body>
+</html>

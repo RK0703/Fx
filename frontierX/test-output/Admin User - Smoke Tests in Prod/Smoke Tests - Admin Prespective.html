@@ -1,0 +1,99 @@
+<html>
+<head>
+<title>TestNG:  Smoke Tests - Admin Prespective</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Smoke Tests - Admin Prespective</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>4/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Thu Jun 09 10:21:03 IST 2022</td>
+</tr>
+<tr><td>Total time:</td><td>113 seconds (113361 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.frontierX.TestScripts.FxAdminWorkFlows.VerifyUserNameDisplayedOnDashboard()'><b>VerifyUserNameDisplayedOnDashboard</b><br>Test class: com.frontierX.TestScripts.FxAdminWorkFlows<br>Test method: Purpose of this test is to Verify that current user's name is displayed when admin access any user's dashboard</td>
+<td></td>
+<td>17</td>
+<td>com.frontierX.TestScripts.FxAdminWorkFlows@4ee203eb</td></tr>
+<tr>
+<td title='com.frontierX.TestScripts.FxAdminWorkFlows.VerifyAdminSearch()'><b>VerifyAdminSearch</b><br>Test class: com.frontierX.TestScripts.FxAdminWorkFlows<br>Test method: Purpose of this test is to Verify admin can search any user in our system</td>
+<td></td>
+<td>10</td>
+<td>com.frontierX.TestScripts.FxAdminWorkFlows@4ee203eb</td></tr>
+<tr>
+<td title='com.frontierX.TestScripts.FxAdminWorkFlows.VerifyLoggedInUser_AdminUser()'><b>VerifyLoggedInUser_AdminUser</b><br>Test class: com.frontierX.TestScripts.FxAdminWorkFlows<br>Test method: Purpose of this test is to Verify if Admin can login in</td>
+<td></td>
+<td>4</td>
+<td>com.frontierX.TestScripts.FxAdminWorkFlows@4ee203eb</td></tr>
+<tr>
+<td title='com.frontierX.TestScripts.FxAdminWorkFlows.VerifyUserLevelChangesAreSaved()'><b>VerifyUserLevelChangesAreSaved</b><br>Test class: com.frontierX.TestScripts.FxAdminWorkFlows<br>Test method: Purpose of this test is to Verify that admin can change the User Level and enable Arrhythmia and that change will remain intact</td>
+<td></td>
+<td>43</td>
+<td>com.frontierX.TestScripts.FxAdminWorkFlows@4ee203eb</td></tr>
+</table><p>
+</body>
+</html>

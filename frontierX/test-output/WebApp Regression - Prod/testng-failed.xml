@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite configfailurepolicy="continue" name="Failed suite [WebApp Regression - Prod]" guice-stage="DEVELOPMENT">
+  <parameter name="enivironment" value="Prod"/>
+  <listeners>
+    <listener class-name="com.frontierX.Utilities.CustomReport"/>
+    <listener class-name="com.frontierX.Utilities.TestNameListener"/>
+  </listeners>
+  <test thread-count="5" name="WebApp Regression(failed)">
+    <classes>
+      <class name="com.frontierX.TestScripts.FxWebApp_Regression">
+        <methods>
+          <include name="VerifyUserCanLoginToFxWebApp"/>
+          <include name="downloadOlderFITFiles"/>
+          <include name="CloseDriverSession"/>
+          <include name="SetEvidenceDir"/>
+          <include name="VerifyHealthEntryAddedAndDeleted"/>
+          <include name="Initialize"/>
+        </methods>
+      </class> <!-- com.frontierX.TestScripts.FxWebApp_Regression -->
+    </classes>
+  </test> <!-- WebApp Regression(failed) -->
+</suite> <!-- Failed suite [WebApp Regression - Prod] -->

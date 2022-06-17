@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Parameterization Test Suite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="com.frontierX.Utilities.CustomReport"/>
+  </listeners>
+  <test thread-count="5" parallel="classes" name="Testing Parameterization(failed)">
+    <parameter name="user" value="admin"/>
+    <parameter name="enivironment" value="staging"/>
+    <classes>
+      <class name="com.frontierX.TestScripts.DownloadFIT">
+        <methods>
+          <include name="downloadFIT" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.frontierX.TestScripts.DownloadFIT -->
+    </classes>
+  </test> <!-- Testing Parameterization(failed) -->
+</suite> <!-- Failed suite [Parameterization Test Suite] -->
