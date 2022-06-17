@@ -62,7 +62,7 @@ private void SetEvidenceDir()
 		
 	
 		
-	 @Test(description = "Purpose of this test is to Verify if Admin can login in")
+	 @Test(description = "Purpose of this test is to Verify Fx Coach platform name is displayed ")
 		public void VerifyFCPName() throws Exception
 		{		
 			justSleepFor(3);
