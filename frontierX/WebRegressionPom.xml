@@ -30,7 +30,7 @@
 				<configuration>
 					<suiteXmlFiles>
 						<!-- TestNG suite XML files -->
-						<suiteXmlFile>WebAppRegression.xml</suiteXmlFile>
+						<suiteXmlFile>/frontierX/WorkFlow_XMLs/WebAppRegression.xml</suiteXmlFile>
 					</suiteXmlFiles>
 				</configuration>
 			</plugin>
