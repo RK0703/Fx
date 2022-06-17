@@ -113,7 +113,7 @@ private void SetEvidenceDir()
 					homeObj.VerifyECGPDFPopUp();
 		 }
 		
-		@Test(description = "Purpose of this test is to Verify Elements Doctors can log in ")
+		@Test(description = "Purpose of this test is to Verify Doctors can log in ")
 		public void VerifyLoggedInUser_DoctorUser() throws Exception
 		{		
 						justSleepFor(4);
