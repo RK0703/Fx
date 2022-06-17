@@ -29,7 +29,7 @@ public class FxCoachWorkFlows extends FxSettings
     {
 	 this.driver = DecideEnvironment(env);
 	 login = new LoginPageLib(driver);
-	 homeObj = login.login("doctor@fourthfrontier.com",FxUtilities.DecryptPass("YXV0b21hdGlvbjRm"));
+	 homeObj = login.login("trainer@fourthfrontier.com",FxUtilities.DecryptPass("YXV0b21hdGlvbjRm"));
     }
 	 
 	 @AfterMethod
