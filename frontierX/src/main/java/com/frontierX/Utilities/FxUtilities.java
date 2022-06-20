@@ -204,7 +204,6 @@ public class FxUtilities
 		{
 		    byte[] DecryptPass = DatatypeConverter.parseBase64Binary(pass);
 		    String dPass = new String(DecryptPass, StandardCharsets.UTF_8);
-		   
 		    return dPass;
 		}
 		
