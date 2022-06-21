@@ -138,6 +138,11 @@ public class HomePageLib extends HomePageObj
 		
 	}
 	
+	public int GetTrainingLoad_RunPage()
+	{
+		return Integer.parseInt(trainingLoad_RunPage.getText());
+		
+	}
 	
 	public void ClickOnActivity(int activityCount)
 	{

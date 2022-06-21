@@ -48,8 +48,11 @@ public class HomePageObj extends FxBasePage
 	@FindBy (className = "mini-toastr-notification__message")
 	protected WebElement NotificationInfoPopUp;
 	
-	@FindBy(xpath = "//div[@class='alert_new_dl_1']")
+	@FindBy(xpath = "//span[@class='alert_new_dl_1']")
 	protected WebElement trainingLoad_ActivitySection ;
+	
+	@FindBy(xpath = "//div[@class='data alert_new_dl_1']")
+	protected WebElement trainingLoad_RunPage ;
 	
 	@FindBy(xpath = "//div[@class='training-percentage']")
 	protected WebElement trainingLoadPercent ; 

@@ -12,7 +12,6 @@ import com.frontierX.BaseSettings.FxBasePage;
 
 public class WorkoutDetailsPageObj extends FxBasePage
 {
-
 	public WorkoutDetailsPageObj(WebDriver driver)
 	{
 		super(driver);
@@ -35,8 +34,9 @@ public class WorkoutDetailsPageObj extends FxBasePage
 	@FindBy(className = "vs-popup")
 	protected WebElement AnnotationWindow;
 	
-
-	//protected WebElement SaveAnnotation = AnnotationWindow.findElement(By.className("btn save-button apply"));
+	@FindBy(xpath = "//body/div[@id='app']/div/div[@class='wrapper row-offcanvas']/aside[@class='right-aside']/section[@class='content']/div/div[@class='header-information']/div[@class='training-statistics']/div[@class='my-col-1 my-md-col-2 my-sm-col-3']/div[1]")
+	protected WebElement TrainingLoadCard;
+	
 	
 	@FindBy (id ="chartst")
 	protected WebElement CardiacStrain;

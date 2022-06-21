@@ -77,6 +77,19 @@ private void SetEvidenceDir()
 					justSleepFor(3);
 	}
 	
+	
+	//
+	@Test(description = "Purpose of this test is to Verify Training load on home page and Workout details page are same")
+	public void VerifyTrainingLoad() throws Exception
+	{	
+		WorkoutDetailsPageLib wd = new WorkoutDetailsPageLib(driver);
+		justSleepFor(3);
+		int TLHomePage = homeObj.GetTrainingLoad_ActivityLevel();
+		homeObj.clickOnGreenTick();
+		wd.SwitchTab();
+		justSleepFor(7);
+		Assert.assertEquals(TLHomePage, wd.GetTrainingLoadValue()) ;
+	}
 
 	
 	@Test (description = "Purpose of this test is to Verify that ECG has been synced and Green Tick mark is visble ")

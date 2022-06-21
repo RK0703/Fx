@@ -51,7 +51,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-TestNG_Reports" class="navigator-link ">
-                    <span>D:\git\frontierX\SingleTest_Run.xml</span>
+                    <span>D:\Gitwebapp\frontierX\SingleTest_Run.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -104,7 +104,7 @@
                     <div class="method-list-content passed suite-TestNG_Reports">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-TestNG_Reports" title="com.frontierX.TestScripts.PlayArea" class="method navigator-link" hash-for-method="VerifyFCPName">VerifyFCPName</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-TestNG_Reports" title="com.frontierX.TestScripts.PlayArea" class="method navigator-link" hash-for-method="PrintTL">PrintTL</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-TestNG_Reports -->
@@ -127,9 +127,9 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="VerifyFCPName">
-                  </a> <!-- VerifyFCPName -->
-                  <span class="method-name">VerifyFCPName</span>
+                  <a name="PrintTL">
+                  </a> <!-- PrintTL -->
+                  <span class="method-name">PrintTL</span>
                   <em>
 (Purpose of this test is to Verify if Admin can login in)                  </em>
                 </div> <!-- method-content -->
@@ -139,7 +139,7 @@
         </div> <!-- panel TestNG_Reports -->
         <div panel-name="test-xml-TestNG_Reports" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">D:\git\frontierX\SingleTest_Run.xml</span>
+            <span class="header-content">D:\Gitwebapp\frontierX\SingleTest_Run.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -147,7 +147,7 @@
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite configfailurepolicy=&quot;continue&quot; thread-count=&quot;2&quot; name=&quot;TestNG Reports&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;5&quot;&gt;
   &lt;test thread-count=&quot;2&quot; parallel=&quot;classes&quot; name=&quot;Single Test Suite&quot; verbose=&quot;5&quot;&gt;
-    &lt;parameter name=&quot;enivironment&quot; value=&quot;stage&quot;/&gt;
+    &lt;parameter name=&quot;enivironment&quot; value=&quot;prod&quot;/&gt;
     &lt;classes&gt;
       &lt;class name=&quot;com.frontierX.TestScripts.PlayArea&quot;/&gt;
     &lt;/classes&gt;
@@ -191,14 +191,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'VerifyFCPName')
+data.setCell(0, 1, 'PrintTL')
 data.setCell(0, 2, 'com.frontierX.TestScripts.PlayArea')
-data.setCell(0, 3, 4180);
+data.setCell(0, 3, 10377);
 window.suiteTableData['TestNG_Reports']= { tableData: data, tableDiv: 'times-div-TestNG_Reports'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 4 seconds</span>
+              <span class="suite-total-time">Total running time: 10 seconds</span>
               <div id="times-div-TestNG_Reports">
               </div> <!-- times-div-TestNG_Reports -->
             </div> <!-- times-div -->
@@ -230,16 +230,16 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
-                <span class="method-name">Initialize(stage)</span>
-                <span class="method-start">86 ms</span>
+                <span class="method-name">Initialize(prod)</span>
+                <span class="method-start">61 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">VerifyFCPName</span>
-                <span class="method-start">12830 ms</span>
+                <span class="method-name">PrintTL</span>
+                <span class="method-start">10490 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">CloseDriverSession([TestResult name=VerifyFCPName status=SUCCESS method=PlayArea.VerifyFCPName()[pri:0, instance:com.fr...)</span>
-                <span class="method-start">17010 ms</span>
+                <span class="method-name">CloseDriverSession([TestResult name=PrintTL status=SUCCESS method=PlayArea.PrintTL()[pri:0, instance:com.frontierX.Test...)</span>
+                <span class="method-start">20884 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

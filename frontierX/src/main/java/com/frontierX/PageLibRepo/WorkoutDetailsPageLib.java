@@ -219,7 +219,13 @@ public class WorkoutDetailsPageLib extends WorkoutDetailsPageObj
 	}
 	
 	
-	
+	public int GetTrainingLoadValue()
+	{
+		SwitchTab();
+		List<WebElement> allChildElements = TrainingLoadCard.findElements(By.xpath("*"));
+		// Extracting just number from the string that contains training load and parsing it to int for further assertions
+		return Integer.parseInt(allChildElements.get(1).getText().replaceAll("[^0-9]", ""));
+	}
 	
 	
 	public boolean VerifyAddNotePopUpDisplays() throws InterruptedException
@@ -232,7 +238,7 @@ public class WorkoutDetailsPageLib extends WorkoutDetailsPageObj
 	
 
 	
-	private void SwitchTab()
+	public void SwitchTab()
 	{
 		List<String> browserTabs = new ArrayList<String> (driver.getWindowHandles());
 		//switch to new tab
@@ -344,19 +350,7 @@ public class WorkoutDetailsPageLib extends WorkoutDetailsPageObj
 			j++;
 		}
 		*/
-	
 
-	
-	public String GetTrainingLoadValue() throws InterruptedException
-	{
-	//	SwitchTab();
-		//Thread.sleep(7000);
-		List<WebElement> TLVal = TrainigLoadCard.findElements(By.xpath("./child::*"));
-		String TrainingLoad =  TLVal.get(1).getText();
-		 
-		CloseTab(driver,browserTabs);
-		return TrainingLoad;
-	}
 	
 	public void ScrollTillElement(WebElement element)
 	{
