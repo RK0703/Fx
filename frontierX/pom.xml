@@ -30,7 +30,7 @@
 				<configuration>
 					<suiteXmlFiles>
 						<!-- TestNG suite XML files -->
-						<suiteXmlFile>SingleTest_Run.xml</suiteXmlFile>
+						<suiteXmlFile>MasterSuite.xml</suiteXmlFile>
 					</suiteXmlFiles>
 				</configuration>
 			</plugin>
