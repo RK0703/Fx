@@ -65,35 +65,20 @@ private void SetEvidenceDir()
 @Test(description = "Purpose of this test is to Verify if Admin can login in")
 public void PrintTL() throws Exception
 {		
-	WorkoutDetailsPageLib wd = new WorkoutDetailsPageLib(driver);
-	justSleepFor(3);
-	int TLHomPage = homeObj.GetTrainingLoad_ActivityLevel();
-	//System.out.println("Training load is "+homeObj.GetTrainingLoad_ActivityLevel());
-	homeObj.clickOnGreenTick();
-	wd.SwitchTab();
-	justSleepFor(7);
-	Assert.assertEquals(TLHomPage, wd.GetTrainingLoadValue()) ;
-	/*
-	String path = "//body/div[@id='app']/div/div[@class='wrapper row-offcanvas']/aside[@class='right-aside']/section[@class='content']/div/div[@class='header-information']/div[@class='training-statistics']/div[@class='my-col-1 my-md-col-2 my-sm-col-3']/div[1]";
-	WebElement a = driver.findElement(By.xpath(path));
+	Thread.sleep(3000);
+	homeObj.ClickAddReportBtn();
+	Thread.sleep(3000);
+	homeObj.VerifyAddReportScreen();
 	
-	List<WebElement> allChildElements = a.findElements(By.xpath("*"));
 	
-	//System.out.println("Parent has these many childs "+allChildElements.size());
 	
-		System.out.println("2nd element has this text"+allChildElements.get(1).getText());
-		
-		
-
-	//	System.out.println("2nd element has this text"+Integer.parseInt(digits));
-		//System.out.println(digits);
-		
-		Assert.assertEquals(TLHomPage, Integer.parseInt(digits),"Training load are not equal");
-		
-	//}
-	//System.out.println("Training load in runner page "+homeObj.GetTrainingLoad_RunPage());
-	//homeObj.VerifyFCPName();
-	*/
+	
+	
+	
+	homeObj.VerifyReportDropDownOptions();
+	
+	
+	
 }
 /*
  * 

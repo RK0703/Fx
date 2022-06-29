@@ -146,6 +146,16 @@ private void SetEvidenceDir()
 	}
 	
 	
+	@Test (description = "Purpose of this test to verify Add Report button and Section is working as expected")
+	public void VerifyAddReportSection() throws Exception
+	{		
+		Thread.sleep(3000);
+		homeObj.ClickAddReportBtn();
+		Thread.sleep(3000);
+		homeObj.VerifyAddReportScreen();
+	}
+	
+
 	@Test (description = "Purpose of this test is to Verify that Health Treand Web Page opens and displays related Charts ")
 	public void VerifyHealthTreandPageDisplays() throws Exception
 	{		

@@ -216,6 +216,16 @@ public class HomePageObj extends FxBasePage
 	protected WebElement RecoSection = driver.findElement(By.className("statistic-box-header"));
 	
 	protected WebElement UserNameSection = driver.findElement(By.className("user_name_max"));
+	
+	
+	protected WebElement AddReportBtn = driver.findElement(By.xpath("//button[normalize-space()='Add Report']"));
+	
+	protected WebElement UploadBtn = driver.findElement(By.xpath("//button[normalize-space()='Upload']"));
+	
+	protected WebElement FileChooseArea = driver.findElement(By.xpath("//input[@id='file']"));
+
+	protected WebElement CancelBtn_AR = driver.findElement(By.xpath("//body/div/div/div/div/div[2]/button[1]"));
+	
 	//	Constructor
 	public HomePageObj(WebDriver driver) 
 	{

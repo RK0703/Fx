@@ -43,6 +43,9 @@ public class HomePageLib extends HomePageObj
 		
 		private List<String> ExpectedUserList = Arrays.asList("User", "FCP User", "Premium User","FHP Premium User","Doctor","Trainer","FHP Doctor","Admin");
 	
+		private List<String> ReportsOptions = Arrays.asList("12 Lead ECG", "Angiogram", "Blood Test","Ct Scan","Discharge Summary","Echocardiogram","Holter ","MRI Scan","Nuclear Scan","Procedure Summary","Stress Test","Other");
+	
+		
 		//ExpectedUserList.
 	
 	//	Action Methods
@@ -353,6 +356,21 @@ public class HomePageLib extends HomePageObj
 		
 	}
 	
+	public void ClickAddReportBtn()
+	{
+		AddReportBtn.click();
+	}
+	
+	
+	public void VerifyAddReportScreen()
+	{
+		
+		Assert.assertTrue(!UploadBtn.isEnabled()); // Upload Button is disabled
+		
+		Assert.assertTrue(CancelBtn_AR.isEnabled());
+		
+		Assert.assertTrue(FileChooseArea.isDisplayed());
+	}
 	
 	
 	public void TestTags()
@@ -593,7 +611,36 @@ public class HomePageLib extends HomePageObj
 	}
 	
 	
+	public void VerifyReportDropDownOptions() throws InterruptedException
+	{
+		Select ReportUploadDropDown = new Select(driver.findElement(By.className("user-role-select")));
+		
+		List<String> ConvertedList = new ArrayList<String>();
+		
+		
+		List<WebElement> ActualReportsList=ReportUploadDropDown.getOptions();
+		Thread.sleep(2000);
+			
+		for(int i = 1 ;i<=ActualReportsList.size()-1;i++)
+		{
+			// Just print this for Debug purpose
+			System.out.println("Debug : -> Item "+i+" : "+ActualReportsList.get(i).getText());
+		//	System.out.println("Debug : -> Expected List Item "+i+" : "+ExpectedUserList.get(i));
+			ConvertedList.add(ActualReportsList.get(i).getText());
+			
+		//Assert.assertTrue(ConvertedList.get(i).equals(ExpectedUserList.get(i)),"Expected is "+ExpectedUserList.get(i)+" Actual is "+ConvertedList.get(i));
+
+		}
+		
+		//Assert.assertTrue(ConvertedList.equals(ExpectedUserList),"Not Equal");
 	
+		for(int j = 1 ;j<=ActualReportsList.size()-1;j++)
+		{
+			Assert.assertTrue(ConvertedList.get(j).equals(ReportsOptions.get(j)),"Expected is "+ReportsOptions.get(j)+" Actual is "+ConvertedList.get(j));
+		}
+		
+		
+	}
 
 	
 }
