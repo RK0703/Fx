@@ -107,39 +107,63 @@ public class HomePageLib extends HomePageObj
 			return false ;
 		}
 	}
+	
+	/*
+	 * Method To click on OK button on ECG PDF pop up
+	 */
+	
 	public void ClickOnOkButton_ECGPopUp()
 	{
 		ECGPDFPopUp_OKBtn.click();
 	}
 	
+	/*
+	 * Method To Get text from Notification toaster
+	 */
 	public String GetNotificationText()
 	{
 		return NotificationInfoPopUp.getText();
 	}
 	
+	/*
+	 * Method To click on Health trend button on Home page
+	 */
 	public void ClickHealthTrendBtn()
 	{
 		HelthTreandBtn.click();
 	}
 	
+	/*
+	 * Method To Verify User Info Pop
+	 */
 	public void VerifyUserInfoPopUp(String expectedInfoTxt)
 	{
 		Assert.assertEquals(NotificationInfoPopUp.getText(), expectedInfoTxt,"Found Expected text is "+expectedInfoTxt);
 	}
 	
-	
+	/*
+	 * Method To verify edited text is displayed for activity
+	 */
 	public void VerifyEditedTextDisplayed()
 	{
 		
 	   Assert.assertTrue(GetActivityInfo().contains(SmokeTestString),"Edited Text is saved");
 		
-		
 	}
+	
+	
+	/*
+	 * Method To return training load as Integer
+	 */
+	
 	public int GetTrainingLoad_ActivityLevel()
 	{
 		return Integer.parseInt(trainingLoad_ActivitySection.getText());
-		
 	}
+	
+	/*
+	 * Method To return training load from Runner Page as Integer
+	 */
 	
 	public int GetTrainingLoad_RunPage()
 	{
@@ -147,33 +171,61 @@ public class HomePageLib extends HomePageObj
 		
 	}
 	
+	/*
+	 * Method To Click on Activity
+	 */
+	
+	
 	public void ClickOnActivity(int activityCount)
 	{
 		ActivityRows.get(activityCount).click();
 	}
 	
+	
+	/*
+	 * Method To Print number of activity 
+	 */
+	
 	public void PrintActivityRows()
 	{
 		System.out.println(" Fishy "+ActivityRows.size());
-		
 	}
+	
+	/*
+	 * Method To return ECG Tick mark color
+	 * Green if synced 
+	 * Red if not synced
+	 */
 	public String GetECGMarker()
 	{
 		
 		return ECGSyncMarker.getAttribute("style");
-		
 	}
+	
+	/*
+	 * Method To return Map Tick mark color
+	 * Green if synced 
+	 * Red if not synced
+	 */
 	
 	public String GetMapMarker()
 	{
 		return MapMarker.getAttribute("style");
 	}
 	
-	
+	/*
+	 * Method To return ECG Tick mark color
+	 * Green if synced 
+	 * Red if not synced
+	 */
 	public String GetActivityInfo()
 	{
 		return FirstRecord.getText();
 	}
+	
+	/*
+	 * Method to search for workout
+	 */
 	public void enterWorkout(String workout)
 	{
 		try
@@ -231,30 +283,48 @@ public class HomePageLib extends HomePageObj
 	{
 		return trainingLoad.getText();
 	}
+	/*
+	 * Return Training load %
+	 */
 	
 	public String trainingLoadPercent()
 	{
 		return trainingLoadPercent.getText();
 	}
 	
+	/*
+	 * Click on down arrow button in Training load area
+	 */
 	public void clickOnTrainingLoadDownArrow() 
 	{
 		trainingLoadDownArrow.click();
 	}
 	
+	/*
+	 * Click on Admin Menu
+	 */
 	public void clickOnAdminMenu()
 	{
 		AdminMenu.click();
 	}
+	/*
+	 * Click on Admin panel
+	 */
 	public void clickOnAdminPanel()
 	{
 		AdminPanel.click();
 	}
-	
+	/*
+	 * Verify FCP name in Admin Panel
+	 */
 	public void VerifyFCPName()
 	{
 		Assert.assertEquals(FCP.getText(), "Frontier Coach Platform");
 	}
+	
+	/*
+	 * Method to search users in Admin panel
+	 */
     
 	public void SearchUsers(String username)
 	{
@@ -263,10 +333,14 @@ public class HomePageLib extends HomePageObj
 		searchButton_Admin.click();
 	}
 	
+	/*
+	 * Method to click on green tick mark
+	 */
 	public void clickOnGreenTick()
 	{
 		ECGMarker.click();
 	}
+	
 	
 	public void clickOnGreenTickAdmin() throws InterruptedException
 	{
@@ -278,6 +352,9 @@ public class HomePageLib extends HomePageObj
 		ECGMarker.click();
 	}
 	
+	/*
+	 * Method to Verify if search user displayed
+	 */
 	public void VerifyIfSearchedUserAppeared(String email)
 	{
 		
@@ -285,11 +362,18 @@ public class HomePageLib extends HomePageObj
 		
 	}
 	
+	
+	/*
+	 * Method to select searched user
+	 */
 	public void SelectDisplyedUser()
 	{
 		UserRecord_Email.click();
 	}
 	
+	/*
+	 * Method to verify if user name is displayed on dashboard if admin/doc/FCP is searchinh
+	 */
 	public void VerifyUserNameIsDisplayedForUser(String UserName)
 	{
 		
@@ -302,6 +386,10 @@ public class HomePageLib extends HomePageObj
 			driver.switchTo().window(browserTabs.get(0));
 	}
 	
+	
+	/*
+	 * Method to Verify ECG PDF POP up
+	 */
 	 public void VerifyECGPDFPopUp()
 	 {
 		 Assert.assertEquals(ECGPDFPopUpTitle.getText(), "Generate & Email ECG PDF ");
@@ -309,20 +397,28 @@ public class HomePageLib extends HomePageObj
 		// Assert.assertTrue(GenerateEmailBtn.isDisplayed());
 	 }
 	
-	
+	 /*
+	  * Method to select any user level
+	  */	
 	public void SelectUserLevel(int userlevel)
 	{
 		Select UserLevelDropDown = new Select(driver.findElement(By.id("userLevel")));
 		UserLevelDropDown.selectByIndex(userlevel);
 	}
 	
+	/*
+	 * Method to Verify User Level which is selected on the drop down
+	 */
 	public void VerifyUserLevel(String ExpectedUserLvl)
 	{
 		Select UserLevelDropDown = new Select(driver.findElement(By.className("user-role-select")));
 		
 		Assert.assertEquals(UserLevelDropDown.getFirstSelectedOption().getText(),ExpectedUserLvl,"Expected Result is matched");
-		
 	}
+	
+	/*
+	 * Method to Verify User Level drop down list
+	 */
 	
 	public void VerifyUserLevelOptions() throws InterruptedException
 	{
@@ -351,16 +447,21 @@ public class HomePageLib extends HomePageObj
 		for(int j = 0 ;j<ActualLevelsList.size();j++)
 		{
 			Assert.assertTrue(ConvertedList.get(j).equals(ExpectedUserList.get(j)),"Expected is "+ExpectedUserList.get(j)+" Actual is "+ConvertedList.get(j));
-		}
-		
-		
+		}	
 	}
 	
+	
+	/*
+	 * Method to Click on Add Report Button
+	 */
 	public void ClickAddReportBtn()
 	{
 		AddReportBtn.click();
 	}
 	
+	/*
+	 * Method to Verify elements on Add Report pop up
+	 */
 	
 	public void VerifyAddReportScreen()
 	{
@@ -372,11 +473,9 @@ public class HomePageLib extends HomePageObj
 		Assert.assertTrue(FileChooseArea.isDisplayed());
 	}
 	
-	
-	public void TestTags()
-	{
-		System.out.println("HealthTags are : " +HealthTags.size());
-	}
+	/*
+	 * Method to select Vitals Tags
+	 */
 	
 	public void SelectVitals() throws InterruptedException
 	{
