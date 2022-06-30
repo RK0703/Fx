@@ -50,7 +50,7 @@ private void SetEvidenceDir()
 
 
 	 @Test (description = "Purpose of this test is to Verify that Fx Coach can Login to FX WebApp")
-		public void VerifyTrainersCanLoginToFxWebApp() throws Exception
+		public void VerifyCoachCanLoginToFxWebApp() throws Exception
 		{
 		
 			    String expectedText= "User Logged In Successfully";
@@ -61,7 +61,7 @@ private void SetEvidenceDir()
 	
 		
 	 @Test(description = "Purpose of this test is to Verify Fx Coach platform name is displayed ")
-		public void VerifyFCPName() throws Exception
+		public void VerifyFCPNameOnAdminPanel() throws Exception
 		{		
 			justSleepFor(3);
 			homeObj.clickOnAdminMenu();

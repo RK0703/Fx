@@ -51,12 +51,12 @@ set "$projectKey=MD"
 set "$versionName=Unscheduled"
 
 :: Cycle info
-set $cycleName="E2EAutomationResult"
+set $cycleName="DailySanity"
 set $createNewCycle="false"
 set $appendDateTimeInCycleName="false"
 
 :: Folder info
-set $folderName="FxWebAppRegression"
+set $folderName="SanityResults"
 set $createNewFolder="false"
 set $appendDateTimeInFolderName="false"
 set $assigneeUser="61b8355d0f02490069deb015"
@@ -66,7 +66,7 @@ set $assigneeUser="61b8355d0f02490069deb015"
 ::set $resultPath=@"C:\Users\user/eclipse-workspace/frontierX/target/surefire-reports/testng-results.xml"
 ::echo "Pick File from ...->" @\%$resultPath%
 ::                "D:\Git Repos\frontierX\target\surefire-reports\TEST-TestSuite.xml"
-set $resultPath=@\"/frontierX/target/surefire-reports/TEST-TestSuite.xml\"
+set $resultPath=@\"C:/ProgramData/Jenkins/.jenkins/workspace/Sanity_WebApp/frontierX/target/surefire-reports/TEST-TestSuite.xml\"
 ::Mandatory Field required from JIRA
 set $mandatoryFields={\"reporter\":{\"label\":\"Ravikiran HM\",\"name\":\"Ravikiran HM\",\"id\":\"61b8355d0f02490069deb015\"}}
 

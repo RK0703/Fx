@@ -122,10 +122,6 @@ private void SetEvidenceDir()
 				homeObj.VerifyIfSearchedUserAppeared("ravikiran@fourthfrontier.com");
 				homeObj.VerifyUserLevelOptions();
 			}
-		
-		
-		
-		
 	//	@Test (description = "Purpose of this test is to Verify that current user's name is displayed when admin access any user's dashboard")
 		public void VerifyECGPDFPopUp()
 		{			
