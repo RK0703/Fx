@@ -281,7 +281,7 @@ public class CustomReport implements IReporter
         writer.print("<tr>");
         writer.print("<th>Class</th>");
         writer.print("<th>Description</th>");
-        writer.print("<th>Method</th>");
+        writer.print("<th>Test Case Name</th>");
         writer.print("<th>Start</th>");
         writer.print("<th>Execution time in Seconds</th>");
         writer.print("</tr>");
@@ -999,14 +999,7 @@ public class CustomReport implements IReporter
     {
     	return new BigDecimal(TimeUnit.SECONDS.toMinutes(seconds)).setScale(2,RoundingMode.HALF_UP).doubleValue();
     }
-   /* 
-    protected void SendReportInMail(String fileToPick,String date) throws IOException
-    {
-    	SendAttachmentInEmail email = new SendAttachmentInEmail();
-    	email.SendMail(fileToPick,date);
-    }
-    */
-    
+  
     /**
      * This Method will copy the Generated Report from Default location to Local 
      * Google driver folder
