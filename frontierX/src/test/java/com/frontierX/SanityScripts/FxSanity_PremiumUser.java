@@ -74,17 +74,6 @@ private void SetEvidenceDir()
 						justSleepFor(3);
 						Assert.assertTrue(FxUtilities.isFxFileDownloaded("346070.fit")," Fit File is downloaded");	
 		}
-	 
-	 
-		@Test(description = "Purpose of this test is to Verify ECG PDF Pop Up for Premium Users")
-		public void VerifyECGPDFPopUp_PremiumUser() throws Exception
-		{		
-						homeObj.clickOnActivityButton();
-						justSleepFor(3);
-						homeObj.ClickgenerateECGPDF();
-						justSleepFor(5);
-						homeObj.VerifyECGPDFPop();
-		}
 		
 		
 		@Test(description = "Purpose of this test is to Verify Elements in Web App for Premium User")
