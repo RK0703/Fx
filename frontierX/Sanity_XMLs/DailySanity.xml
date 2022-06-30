@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Automated Sanity Test cases" preserve-order ="true">
+<parameter name="enivironment" value="prod" />
+  <test name="Daily Sanity">
+    <classes> 
+		<class name="com.frontierX.SanityScripts.FxSanity_Admin"/>
+		<class name="com.frontierX.SanityScripts.FxSanity_Coach"/>
+		<class name="com.frontierX.SanityScripts.FxSanity_Doctor"/> 	
+		<class name="com.frontierX.SanityScripts.FxSanity_PremiumUser"/> 
+		<class name="com.frontierX.SanityScripts.FxSanity_User"/> 	 
+    </classes>
+  </test>
+</suite> <!-- Suite -->

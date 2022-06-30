@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="24" passed="15" failed="9" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-06-30T11:36:26 IST" name="TestNG Reports" finished-at="2022-06-30T11:36:44 IST" duration-ms="18027">
+  <suite started-at="2022-06-30T14:20:55 IST" name="Admin User - Smoke Tests in Prod" finished-at="2022-06-30T14:24:12 IST" duration-ms="196694">
     <groups>
     </groups>
-    <test started-at="2022-06-30T11:36:26 IST" name="Single Test Suite" finished-at="2022-06-30T11:36:44 IST" duration-ms="18027">
-      <class name="com.frontierX.TestScripts.PlayArea">
-        <test-method is-config="true" signature="SetEvidenceDir()[pri:0, instance:com.frontierX.TestScripts.PlayArea@7857fe2]" started-at="2022-06-30T11:36:26 IST" name="SetEvidenceDir" finished-at="2022-06-30T11:36:26 IST" duration-ms="7" status="PASS">
+    <test started-at="2022-06-30T14:20:55 IST" name="Daily Sanity" finished-at="2022-06-30T14:24:12 IST" duration-ms="196694">
+      <class name="com.frontierX.SanityScripts.FxSanity_PremiumUser">
+        <test-method is-config="true" signature="SetEvidenceDir()[pri:0, instance:com.frontierX.SanityScripts.FxSanity_PremiumUser@12591ac8]" started-at="2022-06-30T14:20:55 IST" name="SetEvidenceDir" finished-at="2022-06-30T14:20:55 IST" duration-ms="11" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SetEvidenceDir -->
-        <test-method is-config="true" signature="Initialize(java.lang.String)[pri:0, instance:com.frontierX.TestScripts.PlayArea@7857fe2]" started-at="2022-06-30T11:36:26 IST" name="Initialize" finished-at="2022-06-30T11:36:35 IST" duration-ms="9219" status="PASS">
+        <test-method is-config="true" signature="Initialize(java.lang.String)[pri:0, instance:com.frontierX.SanityScripts.FxSanity_PremiumUser@12591ac8]" started-at="2022-06-30T14:20:55 IST" name="Initialize" finished-at="2022-06-30T14:21:14 IST" duration-ms="18136" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -22,18 +22,687 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Initialize -->
-        <test-method signature="PrintTL()[pri:0, instance:com.frontierX.TestScripts.PlayArea@7857fe2]" started-at="2022-06-30T11:36:35 IST" name="PrintTL" description="Purpose of this test is to Verify if Admin can login in" finished-at="2022-06-30T11:36:44 IST" duration-ms="8473" status="FAIL">
-          <exception class="java.lang.AssertionError">
+        <test-method signature="VerifyECGPDFPopUp_PremiumUser()[pri:0, instance:com.frontierX.SanityScripts.FxSanity_PremiumUser@12591ac8]" started-at="2022-06-30T14:21:14 IST" name="VerifyECGPDFPopUp_PremiumUser" description="Purpose of this test is to Verify ECG PDF Pop Up for Premium Users" finished-at="2022-06-30T14:21:38 IST" duration-ms="24492" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[Expected is Holter  Actual is Holter expected [true] but found [false]]]>
+              <![CDATA[no such element: Unable to locate element: {"method":"partial link text","selector":"Generate ECG PDF"}
+  (Session info: chrome=102.0.5005.115)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
+System info: host: 'DESKTOP-LBTBNFA', ip: '192.168.0.243', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 102.0.5005.115, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: C:\Users\user\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:63203}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: f7e11494447f053e0fb176500c531553
+*** Element info: {Using=partial link text, value=Generate ECG PDF}]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Expected is Holter  Actual is Holter expected [true] but found [false]
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"partial link text","selector":"Generate ECG PDF"}
+  (Session info: chrome=102.0.5005.115)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
+System info: host: 'DESKTOP-LBTBNFA', ip: '192.168.0.243', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 102.0.5005.115, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: C:\Users\user\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:63203}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: f7e11494447f053e0fb176500c531553
+*** Element info: {Using=partial link text, value=Generate ECG PDF}
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByPartialLinkText(RemoteWebDriver.java:388)
+at org.openqa.selenium.By$ByPartialLinkText.findElement(By.java:250)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at jdk.proxy2/jdk.proxy2.$Proxy14.click(Unknown Source)
+at com.frontierX.PageLibRepo.HomePageLib.ClickgenerateECGPDF(HomePageLib.java:563)
+at com.frontierX.SanityScripts.FxSanity_PremiumUser.VerifyECGPDFPopUp_PremiumUser(FxSanity_PremiumUser.java:92)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyECGPDFPopUp_PremiumUser -->
+        <test-method is-config="true" signature="CloseDriverSession(org.testng.ITestResult)[pri:0, instance:com.frontierX.SanityScripts.FxSanity_PremiumUser@12591ac8]" started-at="2022-06-30T14:21:38 IST" name="CloseDriverSession" finished-at="2022-06-30T14:21:40 IST" duration-ms="1566" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=VerifyECGPDFPopUp_PremiumUser status=FAILURE method=FxSanity_PremiumUser.VerifyECGPDFPopUp_PremiumUser()[pri:0, instance:com.frontierX.SanityScripts.FxSanity_PremiumUser@12591ac8] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CloseDriverSession -->
+        <test-method is-config="true" signature="Initialize(java.lang.String)[pri:0, instance:com.frontierX.SanityScripts.FxSanity_PremiumUser@12591ac8]" started-at="2022-06-30T14:21:40 IST" name="Initialize" finished-at="2022-06-30T14:21:52 IST" duration-ms="12447" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[prod]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Initialize -->
+        <test-method signature="VerifyHomePageElements_PremiumUser()[pri:0, instance:com.frontierX.SanityScripts.FxSanity_PremiumUser@12591ac8]" started-at="2022-06-30T14:21:52 IST" name="VerifyHomePageElements_PremiumUser" description="Purpose of this test is to Verify Elements in Web App for Premium User" finished-at="2022-06-30T14:21:56 IST" duration-ms="4364" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyHomePageElements_PremiumUser -->
+        <test-method is-config="true" signature="CloseDriverSession(org.testng.ITestResult)[pri:0, instance:com.frontierX.SanityScripts.FxSanity_PremiumUser@12591ac8]" started-at="2022-06-30T14:21:56 IST" name="CloseDriverSession" finished-at="2022-06-30T14:21:57 IST" duration-ms="458" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=VerifyHomePageElements_PremiumUser status=SUCCESS method=FxSanity_PremiumUser.VerifyHomePageElements_PremiumUser()[pri:0, instance:com.frontierX.SanityScripts.FxSanity_PremiumUser@12591ac8] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CloseDriverSession -->
+        <test-method is-config="true" signature="Initialize(java.lang.String)[pri:0, instance:com.frontierX.SanityScripts.FxSanity_PremiumUser@12591ac8]" started-at="2022-06-30T14:21:57 IST" name="Initialize" finished-at="2022-06-30T14:22:07 IST" duration-ms="9750" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[prod]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Initialize -->
+        <test-method signature="VerifyPremiumUserCanDownloadFITFiles()[pri:0, instance:com.frontierX.SanityScripts.FxSanity_PremiumUser@12591ac8]" started-at="2022-06-30T14:22:07 IST" name="VerifyPremiumUserCanDownloadFITFiles" description="Purpose of this test is to Verify that user can Download and verify Current Day&#039;s FIT File and verifies if its valid or not based on length of file" finished-at="2022-06-30T14:22:22 IST" duration-ms="15770" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyPremiumUserCanDownloadFITFiles -->
+        <test-method is-config="true" signature="CloseDriverSession(org.testng.ITestResult)[pri:0, instance:com.frontierX.SanityScripts.FxSanity_PremiumUser@12591ac8]" started-at="2022-06-30T14:22:22 IST" name="CloseDriverSession" finished-at="2022-06-30T14:22:23 IST" duration-ms="255" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=VerifyPremiumUserCanDownloadFITFiles status=SUCCESS method=FxSanity_PremiumUser.VerifyPremiumUserCanDownloadFITFiles()[pri:0, instance:com.frontierX.SanityScripts.FxSanity_PremiumUser@12591ac8] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CloseDriverSession -->
+        <test-method is-config="true" signature="Initialize(java.lang.String)[pri:0, instance:com.frontierX.SanityScripts.FxSanity_PremiumUser@12591ac8]" started-at="2022-06-30T14:22:23 IST" name="Initialize" finished-at="2022-06-30T14:22:34 IST" duration-ms="11378" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[prod]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Initialize -->
+        <test-method signature="VerifyPremiumUsersCanLoginToFxWebApp()[pri:0, instance:com.frontierX.SanityScripts.FxSanity_PremiumUser@12591ac8]" started-at="2022-06-30T14:22:34 IST" name="VerifyPremiumUsersCanLoginToFxWebApp" description="Purpose of this test is to Verify that premium user can Login to FX WebApp" finished-at="2022-06-30T14:22:54 IST" duration-ms="20053" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":".mini\-toastr\-notification__message"}
+  (Session info: chrome=102.0.5005.115)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
+System info: host: 'DESKTOP-LBTBNFA', ip: '192.168.0.243', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 102.0.5005.115, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: C:\Users\user\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:64043}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 0b6330988a48127bb8014732df3ffab1
+*** Element info: {Using=class name, value=mini-toastr-notification__message}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":".mini\-toastr\-notification__message"}
+  (Session info: chrome=102.0.5005.115)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
+System info: host: 'DESKTOP-LBTBNFA', ip: '192.168.0.243', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 102.0.5005.115, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: C:\Users\user\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:64043}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 0b6330988a48127bb8014732df3ffab1
+*** Element info: {Using=class name, value=mini-toastr-notification__message}
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByClassName(RemoteWebDriver.java:412)
+at org.openqa.selenium.By$ByClassName.findElement(By.java:389)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at jdk.proxy2/jdk.proxy2.$Proxy14.getText(Unknown Source)
+at com.frontierX.PageLibRepo.HomePageLib.VerifyUserInfoPopUp(HomePageLib.java:141)
+at com.frontierX.SanityScripts.FxSanity_PremiumUser.VerifyPremiumUsersCanLoginToFxWebApp(FxSanity_PremiumUser.java:67)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyPremiumUsersCanLoginToFxWebApp -->
+        <test-method is-config="true" signature="CloseDriverSession(org.testng.ITestResult)[pri:0, instance:com.frontierX.SanityScripts.FxSanity_PremiumUser@12591ac8]" started-at="2022-06-30T14:22:54 IST" name="CloseDriverSession" finished-at="2022-06-30T14:22:55 IST" duration-ms="785" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=VerifyPremiumUsersCanLoginToFxWebApp status=FAILURE method=FxSanity_PremiumUser.VerifyPremiumUsersCanLoginToFxWebApp()[pri:0, instance:com.frontierX.SanityScripts.FxSanity_PremiumUser@12591ac8] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CloseDriverSession -->
+      </class> <!-- com.frontierX.SanityScripts.FxSanity_PremiumUser -->
+      <class name="com.frontierX.SanityScripts.FxSanity_User">
+        <test-method is-config="true" signature="SetEvidenceDir()[pri:0, instance:com.frontierX.SanityScripts.FxSanity_User@5a7fe64f]" started-at="2022-06-30T14:20:55 IST" name="SetEvidenceDir" finished-at="2022-06-30T14:20:55 IST" duration-ms="11" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SetEvidenceDir -->
+        <test-method is-config="true" signature="Initialize(java.lang.String)[pri:0, instance:com.frontierX.SanityScripts.FxSanity_User@5a7fe64f]" started-at="2022-06-30T14:20:55 IST" name="Initialize" finished-at="2022-06-30T14:21:13 IST" duration-ms="17753" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[prod]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Initialize -->
+        <test-method signature="VerifyActivitySync()[pri:0, instance:com.frontierX.SanityScripts.FxSanity_User@5a7fe64f]" started-at="2022-06-30T14:21:13 IST" name="VerifyActivitySync" description="Purpose of this test is to Verify that User can Sync his activity and it is being displayed" finished-at="2022-06-30T14:21:14 IST" duration-ms="647" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyActivitySync -->
+        <test-method is-config="true" signature="CloseDriverSession(org.testng.ITestResult)[pri:0, instance:com.frontierX.SanityScripts.FxSanity_User@5a7fe64f]" started-at="2022-06-30T14:21:14 IST" name="CloseDriverSession" finished-at="2022-06-30T14:21:17 IST" duration-ms="2782" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=VerifyActivitySync status=SUCCESS method=FxSanity_User.VerifyActivitySync()[pri:0, instance:com.frontierX.SanityScripts.FxSanity_User@5a7fe64f] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CloseDriverSession -->
+        <test-method is-config="true" signature="Initialize(java.lang.String)[pri:0, instance:com.frontierX.SanityScripts.FxSanity_User@5a7fe64f]" started-at="2022-06-30T14:21:17 IST" name="Initialize" finished-at="2022-06-30T14:21:29 IST" duration-ms="12345" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[prod]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Initialize -->
+        <test-method signature="VerifyAddReportSection()[pri:0, instance:com.frontierX.SanityScripts.FxSanity_User@5a7fe64f]" started-at="2022-06-30T14:21:29 IST" name="VerifyAddReportSection" description="Purpose of this test to verify Add Report button and Section is working as expected" finished-at="2022-06-30T14:21:36 IST" duration-ms="6771" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyAddReportSection -->
+        <test-method is-config="true" signature="CloseDriverSession(org.testng.ITestResult)[pri:0, instance:com.frontierX.SanityScripts.FxSanity_User@5a7fe64f]" started-at="2022-06-30T14:21:36 IST" name="CloseDriverSession" finished-at="2022-06-30T14:21:38 IST" duration-ms="2181" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=VerifyAddReportSection status=SUCCESS method=FxSanity_User.VerifyAddReportSection()[pri:0, instance:com.frontierX.SanityScripts.FxSanity_User@5a7fe64f] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CloseDriverSession -->
+        <test-method is-config="true" signature="Initialize(java.lang.String)[pri:0, instance:com.frontierX.SanityScripts.FxSanity_User@5a7fe64f]" started-at="2022-06-30T14:21:38 IST" name="Initialize" finished-at="2022-06-30T14:21:51 IST" duration-ms="13611" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[prod]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Initialize -->
+        <test-method signature="VerifyECGSyncIsSuccessfull()[pri:0, instance:com.frontierX.SanityScripts.FxSanity_User@5a7fe64f]" started-at="2022-06-30T14:21:51 IST" name="VerifyECGSyncIsSuccessfull" description="Purpose of this test is to Verify that ECG has been synced and Green Tick mark is visble " finished-at="2022-06-30T14:22:01 IST" duration-ms="9642" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyECGSyncIsSuccessfull -->
+        <test-method is-config="true" signature="CloseDriverSession(org.testng.ITestResult)[pri:0, instance:com.frontierX.SanityScripts.FxSanity_User@5a7fe64f]" started-at="2022-06-30T14:22:01 IST" name="CloseDriverSession" finished-at="2022-06-30T14:22:01 IST" duration-ms="254" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=VerifyECGSyncIsSuccessfull status=SUCCESS method=FxSanity_User.VerifyECGSyncIsSuccessfull()[pri:0, instance:com.frontierX.SanityScripts.FxSanity_User@5a7fe64f] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CloseDriverSession -->
+        <test-method is-config="true" signature="Initialize(java.lang.String)[pri:0, instance:com.frontierX.SanityScripts.FxSanity_User@5a7fe64f]" started-at="2022-06-30T14:22:01 IST" name="Initialize" finished-at="2022-06-30T14:22:12 IST" duration-ms="11039" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[prod]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Initialize -->
+        <test-method signature="VerifyEditedActivity()[pri:0, instance:com.frontierX.SanityScripts.FxSanity_User@5a7fe64f]" started-at="2022-06-30T14:22:12 IST" name="VerifyEditedActivity" description="Purpose of this test is to Verify that User can Edit the Activity and save it" finished-at="2022-06-30T14:22:27 IST" duration-ms="14705" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyEditedActivity -->
+        <test-method is-config="true" signature="CloseDriverSession(org.testng.ITestResult)[pri:0, instance:com.frontierX.SanityScripts.FxSanity_User@5a7fe64f]" started-at="2022-06-30T14:22:27 IST" name="CloseDriverSession" finished-at="2022-06-30T14:22:27 IST" duration-ms="228" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=VerifyEditedActivity status=SUCCESS method=FxSanity_User.VerifyEditedActivity()[pri:0, instance:com.frontierX.SanityScripts.FxSanity_User@5a7fe64f] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CloseDriverSession -->
+        <test-method is-config="true" signature="Initialize(java.lang.String)[pri:0, instance:com.frontierX.SanityScripts.FxSanity_User@5a7fe64f]" started-at="2022-06-30T14:22:27 IST" name="Initialize" finished-at="2022-06-30T14:22:40 IST" duration-ms="13026" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[prod]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Initialize -->
+        <test-method signature="VerifyHealthTreandPageDisplays()[pri:0, instance:com.frontierX.SanityScripts.FxSanity_User@5a7fe64f]" started-at="2022-06-30T14:22:40 IST" name="VerifyHealthTreandPageDisplays" description="Purpose of this test is to Verify that Health Treand Web Page opens and displays related Charts " finished-at="2022-06-30T14:22:43 IST" duration-ms="2664" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyHealthTreandPageDisplays -->
+        <test-method is-config="true" signature="CloseDriverSession(org.testng.ITestResult)[pri:0, instance:com.frontierX.SanityScripts.FxSanity_User@5a7fe64f]" started-at="2022-06-30T14:22:43 IST" name="CloseDriverSession" finished-at="2022-06-30T14:22:43 IST" duration-ms="249" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=VerifyHealthTreandPageDisplays status=SUCCESS method=FxSanity_User.VerifyHealthTreandPageDisplays()[pri:0, instance:com.frontierX.SanityScripts.FxSanity_User@5a7fe64f] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CloseDriverSession -->
+        <test-method is-config="true" signature="Initialize(java.lang.String)[pri:0, instance:com.frontierX.SanityScripts.FxSanity_User@5a7fe64f]" started-at="2022-06-30T14:22:43 IST" name="Initialize" finished-at="2022-06-30T14:22:55 IST" duration-ms="11500" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[prod]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Initialize -->
+        <test-method signature="VerifyInsightInfoAreDisplayed()[pri:0, instance:com.frontierX.SanityScripts.FxSanity_User@5a7fe64f]" started-at="2022-06-30T14:22:55 IST" name="VerifyInsightInfoAreDisplayed" description="Purpose of this test is to Verify if Insights are displayed or not " finished-at="2022-06-30T14:23:04 IST" duration-ms="9491" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyInsightInfoAreDisplayed -->
+        <test-method is-config="true" signature="CloseDriverSession(org.testng.ITestResult)[pri:0, instance:com.frontierX.SanityScripts.FxSanity_User@5a7fe64f]" started-at="2022-06-30T14:23:04 IST" name="CloseDriverSession" finished-at="2022-06-30T14:23:05 IST" duration-ms="411" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=VerifyInsightInfoAreDisplayed status=SUCCESS method=FxSanity_User.VerifyInsightInfoAreDisplayed()[pri:0, instance:com.frontierX.SanityScripts.FxSanity_User@5a7fe64f] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CloseDriverSession -->
+        <test-method is-config="true" signature="Initialize(java.lang.String)[pri:0, instance:com.frontierX.SanityScripts.FxSanity_User@5a7fe64f]" started-at="2022-06-30T14:23:05 IST" name="Initialize" finished-at="2022-06-30T14:23:16 IST" duration-ms="11242" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[prod]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Initialize -->
+        <test-method signature="VerifyTrainingLoad()[pri:0, instance:com.frontierX.SanityScripts.FxSanity_User@5a7fe64f]" started-at="2022-06-30T14:23:16 IST" name="VerifyTrainingLoad" description="Purpose of this test is to Verify Training load on home page and Workout details page are same" finished-at="2022-06-30T14:23:46 IST" duration-ms="30399" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//body/div[@id='app']/div/div[@class='wrapper row-offcanvas']/aside[@class='right-aside']/section[@class='content']/div/div[@class='header-information']/div[@class='training-statistics']/div[@class='my-col-1 my-md-col-2 my-sm-col-3']/div[1]"}
+  (Session info: chrome=102.0.5005.115)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
+System info: host: 'DESKTOP-LBTBNFA', ip: '192.168.0.243', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 102.0.5005.115, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: C:\Users\user\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:64370}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: c2983b4b15b7bfc763b6f6b381f9e874
+*** Element info: {Using=xpath, value=//body/div[@id='app']/div/div[@class='wrapper row-offcanvas']/aside[@class='right-aside']/section[@class='content']/div/div[@class='header-information']/div[@class='training-statistics']/div[@class='my-col-1 my-md-col-2 my-sm-col-3']/div[1]}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//body/div[@id='app']/div/div[@class='wrapper row-offcanvas']/aside[@class='right-aside']/section[@class='content']/div/div[@class='header-information']/div[@class='training-statistics']/div[@class='my-col-1 my-md-col-2 my-sm-col-3']/div[1]"}
+  (Session info: chrome=102.0.5005.115)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
+System info: host: 'DESKTOP-LBTBNFA', ip: '192.168.0.243', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 102.0.5005.115, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: C:\Users\user\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:64370}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: c2983b4b15b7bfc763b6f6b381f9e874
+*** Element info: {Using=xpath, value=//body/div[@id='app']/div/div[@class='wrapper row-offcanvas']/aside[@class='right-aside']/section[@class='content']/div/div[@class='header-information']/div[@class='training-statistics']/div[@class='my-col-1 my-md-col-2 my-sm-col-3']/div[1]}
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at jdk.proxy2/jdk.proxy2.$Proxy14.findElements(Unknown Source)
+at com.frontierX.PageLibRepo.WorkoutDetailsPageLib.GetTrainingLoadValue(WorkoutDetailsPageLib.java:225)
+at com.frontierX.SanityScripts.FxSanity_User.VerifyTrainingLoad(FxSanity_User.java:74)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyTrainingLoad -->
+        <test-method is-config="true" signature="CloseDriverSession(org.testng.ITestResult)[pri:0, instance:com.frontierX.SanityScripts.FxSanity_User@5a7fe64f]" started-at="2022-06-30T14:23:46 IST" name="CloseDriverSession" finished-at="2022-06-30T14:23:47 IST" duration-ms="663" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=VerifyTrainingLoad status=FAILURE method=FxSanity_User.VerifyTrainingLoad()[pri:0, instance:com.frontierX.SanityScripts.FxSanity_User@5a7fe64f] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CloseDriverSession -->
+        <test-method is-config="true" signature="Initialize(java.lang.String)[pri:0, instance:com.frontierX.SanityScripts.FxSanity_User@5a7fe64f]" started-at="2022-06-30T14:23:47 IST" name="Initialize" finished-at="2022-06-30T14:23:58 IST" duration-ms="10592" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[prod]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Initialize -->
+        <test-method signature="VerifyUserCanDownloadLatestFITFiles()[pri:0, instance:com.frontierX.SanityScripts.FxSanity_User@5a7fe64f]" started-at="2022-06-30T14:23:58 IST" name="VerifyUserCanDownloadLatestFITFiles" description="Purpose of this test is to Verify that user can Download and verify Current Day&#039;s FIT File and verifies if its valid or not based on length of file" finished-at="2022-06-30T14:24:12 IST" duration-ms="14362" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyUserCanDownloadLatestFITFiles -->
+        <test-method is-config="true" signature="CloseDriverSession(org.testng.ITestResult)[pri:0, instance:com.frontierX.SanityScripts.FxSanity_User@5a7fe64f]" started-at="2022-06-30T14:24:12 IST" name="CloseDriverSession" finished-at="2022-06-30T14:24:12 IST" duration-ms="63" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=VerifyUserCanDownloadLatestFITFiles status=SUCCESS method=FxSanity_User.VerifyUserCanDownloadLatestFITFiles()[pri:0, instance:com.frontierX.SanityScripts.FxSanity_User@5a7fe64f] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CloseDriverSession -->
+      </class> <!-- com.frontierX.SanityScripts.FxSanity_User -->
+      <class name="com.frontierX.SanityScripts.FxSanity_Admin">
+        <test-method is-config="true" signature="SetEvidenceDir()[pri:0, instance:com.frontierX.SanityScripts.FxSanity_Admin@d23e042]" started-at="2022-06-30T14:20:55 IST" name="SetEvidenceDir" finished-at="2022-06-30T14:20:55 IST" duration-ms="11" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SetEvidenceDir -->
+        <test-method is-config="true" signature="Initialize(java.lang.String)[pri:0, instance:com.frontierX.SanityScripts.FxSanity_Admin@d23e042]" started-at="2022-06-30T14:20:55 IST" name="Initialize" finished-at="2022-06-30T14:21:13 IST" duration-ms="18029" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[prod]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Initialize -->
+        <test-method signature="VerifyAdminSearch()[pri:0, instance:com.frontierX.SanityScripts.FxSanity_Admin@d23e042]" started-at="2022-06-30T14:21:13 IST" name="VerifyAdminSearch" description="Purpose of this test is to Verify admin can search any user in our system" finished-at="2022-06-30T14:21:26 IST" duration-ms="12293" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyAdminSearch -->
+        <test-method is-config="true" signature="CloseDriverSession(org.testng.ITestResult)[pri:0, instance:com.frontierX.SanityScripts.FxSanity_Admin@d23e042]" started-at="2022-06-30T14:21:26 IST" name="CloseDriverSession" finished-at="2022-06-30T14:21:26 IST" duration-ms="410" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=VerifyAdminSearch status=SUCCESS method=FxSanity_Admin.VerifyAdminSearch()[pri:0, instance:com.frontierX.SanityScripts.FxSanity_Admin@d23e042] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CloseDriverSession -->
+        <test-method is-config="true" signature="Initialize(java.lang.String)[pri:0, instance:com.frontierX.SanityScripts.FxSanity_Admin@d23e042]" started-at="2022-06-30T14:21:26 IST" name="Initialize" finished-at="2022-06-30T14:21:37 IST" duration-ms="11009" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[prod]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Initialize -->
+        <test-method signature="VerifyLoggedInUser_AdminUser()[pri:0, instance:com.frontierX.SanityScripts.FxSanity_Admin@d23e042]" started-at="2022-06-30T14:21:37 IST" name="VerifyLoggedInUser_AdminUser" description="Purpose of this test is to Verify if Admin can login in" finished-at="2022-06-30T14:21:41 IST" duration-ms="4029" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyLoggedInUser_AdminUser -->
+        <test-method is-config="true" signature="CloseDriverSession(org.testng.ITestResult)[pri:0, instance:com.frontierX.SanityScripts.FxSanity_Admin@d23e042]" started-at="2022-06-30T14:21:41 IST" name="CloseDriverSession" finished-at="2022-06-30T14:21:41 IST" duration-ms="246" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=VerifyLoggedInUser_AdminUser status=SUCCESS method=FxSanity_Admin.VerifyLoggedInUser_AdminUser()[pri:0, instance:com.frontierX.SanityScripts.FxSanity_Admin@d23e042] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CloseDriverSession -->
+        <test-method is-config="true" signature="Initialize(java.lang.String)[pri:0, instance:com.frontierX.SanityScripts.FxSanity_Admin@d23e042]" started-at="2022-06-30T14:21:41 IST" name="Initialize" finished-at="2022-06-30T14:21:54 IST" duration-ms="12425" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[prod]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Initialize -->
+        <test-method signature="VerifyUserLevelChangesAreSaved()[pri:0, instance:com.frontierX.SanityScripts.FxSanity_Admin@d23e042]" started-at="2022-06-30T14:21:54 IST" name="VerifyUserLevelChangesAreSaved" description="Purpose of this test is to Verify that admin can change the User Level and enable Arrhythmia and that change will remain intact" finished-at="2022-06-30T14:22:33 IST" duration-ms="38845" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":".mini\-toastr\-notification__message"}
+  (Session info: chrome=102.0.5005.115)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
+System info: host: 'DESKTOP-LBTBNFA', ip: '192.168.0.243', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 102.0.5005.115, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: C:\Users\user\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:63769}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: bc38c12edd08581a4bdf95a39a6bd185
+*** Element info: {Using=class name, value=mini-toastr-notification__message}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":".mini\-toastr\-notification__message"}
+  (Session info: chrome=102.0.5005.115)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
+System info: host: 'DESKTOP-LBTBNFA', ip: '192.168.0.243', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 102.0.5005.115, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: C:\Users\user\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:63769}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: bc38c12edd08581a4bdf95a39a6bd185
+*** Element info: {Using=class name, value=mini-toastr-notification__message}
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByClassName(RemoteWebDriver.java:412)
+at org.openqa.selenium.By$ByClassName.findElement(By.java:389)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at jdk.proxy2/jdk.proxy2.$Proxy14.getText(Unknown Source)
+at com.frontierX.PageLibRepo.HomePageLib.GetNotificationText(HomePageLib.java:125)
+at com.frontierX.SanityScripts.FxSanity_Admin.ChangeUserSettings(FxSanity_Admin.java:177)
+at com.frontierX.SanityScripts.FxSanity_Admin.VerifyUserLevelChangesAreSaved(FxSanity_Admin.java:59)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyUserLevelChangesAreSaved -->
+        <test-method is-config="true" signature="CloseDriverSession(org.testng.ITestResult)[pri:0, instance:com.frontierX.SanityScripts.FxSanity_Admin@d23e042]" started-at="2022-06-30T14:22:33 IST" name="CloseDriverSession" finished-at="2022-06-30T14:22:34 IST" duration-ms="881" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=VerifyUserLevelChangesAreSaved status=FAILURE method=FxSanity_Admin.VerifyUserLevelChangesAreSaved()[pri:0, instance:com.frontierX.SanityScripts.FxSanity_Admin@d23e042] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CloseDriverSession -->
+        <test-method is-config="true" signature="Initialize(java.lang.String)[pri:0, instance:com.frontierX.SanityScripts.FxSanity_Admin@d23e042]" started-at="2022-06-30T14:22:34 IST" name="Initialize" finished-at="2022-06-30T14:22:45 IST" duration-ms="11426" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[prod]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Initialize -->
+        <test-method signature="VerifyUserLevelsAvailable()[pri:0, instance:com.frontierX.SanityScripts.FxSanity_Admin@d23e042]" started-at="2022-06-30T14:22:45 IST" name="VerifyUserLevelsAvailable" description="Purpose of this test is to Verify admin can search any user in our system" finished-at="2022-06-30T14:22:56 IST" duration-ms="11460" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyUserLevelsAvailable -->
+        <test-method is-config="true" signature="CloseDriverSession(org.testng.ITestResult)[pri:0, instance:com.frontierX.SanityScripts.FxSanity_Admin@d23e042]" started-at="2022-06-30T14:22:56 IST" name="CloseDriverSession" finished-at="2022-06-30T14:22:57 IST" duration-ms="199" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=VerifyUserLevelsAvailable status=SUCCESS method=FxSanity_Admin.VerifyUserLevelsAvailable()[pri:0, instance:com.frontierX.SanityScripts.FxSanity_Admin@d23e042] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CloseDriverSession -->
+        <test-method is-config="true" signature="Initialize(java.lang.String)[pri:0, instance:com.frontierX.SanityScripts.FxSanity_Admin@d23e042]" started-at="2022-06-30T14:22:57 IST" name="Initialize" finished-at="2022-06-30T14:23:06 IST" duration-ms="9795" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[prod]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Initialize -->
+        <test-method signature="VerifyUserLevelsDropDown()[pri:0, instance:com.frontierX.SanityScripts.FxSanity_Admin@d23e042]" started-at="2022-06-30T14:23:06 IST" name="VerifyUserLevelsDropDown" description="Purpose of this test is to Verify Levels of users in our system" finished-at="2022-06-30T14:23:20 IST" duration-ms="14004" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Expected is FHP Doctor Actual is FCP Sales expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Expected is FHP Doctor Actual is FCP Sales expected [true] but found [false]
 at org.testng.Assert.fail(Assert.java:99)
 at org.testng.Assert.failNotEquals(Assert.java:1037)
 at org.testng.Assert.assertTrue(Assert.java:45)
-at com.frontierX.PageLibRepo.HomePageLib.VerifyReportDropDownOptions(HomePageLib.java:738)
-at com.frontierX.TestScripts.PlayArea.PrintTL(PlayArea.java:78)
+at com.frontierX.PageLibRepo.HomePageLib.VerifyUserLevelOptions(HomePageLib.java:449)
+at com.frontierX.SanityScripts.FxSanity_Admin.VerifyUserLevelsDropDown(FxSanity_Admin.java:126)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -54,19 +723,457 @@ at java.base/java.lang.Thread.run(Thread.java:833)
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- PrintTL -->
-        <test-method is-config="true" signature="CloseDriverSession(org.testng.ITestResult)[pri:0, instance:com.frontierX.TestScripts.PlayArea@7857fe2]" started-at="2022-06-30T11:36:44 IST" name="CloseDriverSession" finished-at="2022-06-30T11:36:44 IST" duration-ms="307" status="PASS">
+        </test-method> <!-- VerifyUserLevelsDropDown -->
+        <test-method is-config="true" signature="CloseDriverSession(org.testng.ITestResult)[pri:0, instance:com.frontierX.SanityScripts.FxSanity_Admin@d23e042]" started-at="2022-06-30T14:23:20 IST" name="CloseDriverSession" finished-at="2022-06-30T14:23:21 IST" duration-ms="375" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=PrintTL status=FAILURE method=PlayArea.PrintTL()[pri:0, instance:com.frontierX.TestScripts.PlayArea@7857fe2] output={null}]]]>
+                <![CDATA[[TestResult name=VerifyUserLevelsDropDown status=FAILURE method=FxSanity_Admin.VerifyUserLevelsDropDown()[pri:0, instance:com.frontierX.SanityScripts.FxSanity_Admin@d23e042] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CloseDriverSession -->
-      </class> <!-- com.frontierX.TestScripts.PlayArea -->
-    </test> <!-- Single Test Suite -->
-  </suite> <!-- TestNG Reports -->
+        <test-method is-config="true" signature="Initialize(java.lang.String)[pri:0, instance:com.frontierX.SanityScripts.FxSanity_Admin@d23e042]" started-at="2022-06-30T14:23:21 IST" name="Initialize" finished-at="2022-06-30T14:23:30 IST" duration-ms="9247" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[prod]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Initialize -->
+        <test-method signature="VerifyUserNameDisplayedOnDashboard()[pri:0, instance:com.frontierX.SanityScripts.FxSanity_Admin@d23e042]" started-at="2022-06-30T14:23:30 IST" name="VerifyUserNameDisplayedOnDashboard" description="Purpose of this test is to Verify that current user&#039;s name is displayed when admin access any user&#039;s dashboard" finished-at="2022-06-30T14:23:47 IST" duration-ms="17374" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyUserNameDisplayedOnDashboard -->
+        <test-method is-config="true" signature="CloseDriverSession(org.testng.ITestResult)[pri:0, instance:com.frontierX.SanityScripts.FxSanity_Admin@d23e042]" started-at="2022-06-30T14:23:47 IST" name="CloseDriverSession" finished-at="2022-06-30T14:23:48 IST" duration-ms="374" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=VerifyUserNameDisplayedOnDashboard status=SUCCESS method=FxSanity_Admin.VerifyUserNameDisplayedOnDashboard()[pri:0, instance:com.frontierX.SanityScripts.FxSanity_Admin@d23e042] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CloseDriverSession -->
+      </class> <!-- com.frontierX.SanityScripts.FxSanity_Admin -->
+      <class name="com.frontierX.SanityScripts.FxSanity_Doctor">
+        <test-method is-config="true" signature="SetEvidenceDir()[pri:0, instance:com.frontierX.SanityScripts.FxSanity_Doctor@14bdbc74]" started-at="2022-06-30T14:20:55 IST" name="SetEvidenceDir" finished-at="2022-06-30T14:20:55 IST" duration-ms="11" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SetEvidenceDir -->
+        <test-method is-config="true" signature="Initialize(java.lang.String)[pri:0, instance:com.frontierX.SanityScripts.FxSanity_Doctor@14bdbc74]" started-at="2022-06-30T14:20:55 IST" name="Initialize" finished-at="2022-06-30T14:21:13 IST" duration-ms="18099" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[prod]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Initialize -->
+        <test-method signature="VerifyDoctorsCanLoginToFxWebApp()[pri:0, instance:com.frontierX.SanityScripts.FxSanity_Doctor@14bdbc74]" started-at="2022-06-30T14:21:13 IST" name="VerifyDoctorsCanLoginToFxWebApp" description="Purpose of this test is to Verify that Doctor can Login to FX WebApp" finished-at="2022-06-30T14:21:34 IST" duration-ms="20214" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":".mini\-toastr\-notification__message"}
+  (Session info: chrome=102.0.5005.115)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
+System info: host: 'DESKTOP-LBTBNFA', ip: '192.168.0.243', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 102.0.5005.115, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: C:\Users\user\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:63199}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: e9f5d191c32fc733da19442d0f2cc79b
+*** Element info: {Using=class name, value=mini-toastr-notification__message}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":".mini\-toastr\-notification__message"}
+  (Session info: chrome=102.0.5005.115)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
+System info: host: 'DESKTOP-LBTBNFA', ip: '192.168.0.243', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 102.0.5005.115, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: C:\Users\user\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:63199}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: e9f5d191c32fc733da19442d0f2cc79b
+*** Element info: {Using=class name, value=mini-toastr-notification__message}
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByClassName(RemoteWebDriver.java:412)
+at org.openqa.selenium.By$ByClassName.findElement(By.java:389)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at jdk.proxy2/jdk.proxy2.$Proxy14.getText(Unknown Source)
+at com.frontierX.PageLibRepo.HomePageLib.VerifyUserInfoPopUp(HomePageLib.java:141)
+at com.frontierX.SanityScripts.FxSanity_Doctor.VerifyDoctorsCanLoginToFxWebApp(FxSanity_Doctor.java:62)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyDoctorsCanLoginToFxWebApp -->
+        <test-method is-config="true" signature="CloseDriverSession(org.testng.ITestResult)[pri:0, instance:com.frontierX.SanityScripts.FxSanity_Doctor@14bdbc74]" started-at="2022-06-30T14:21:34 IST" name="CloseDriverSession" finished-at="2022-06-30T14:21:34 IST" duration-ms="661" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=VerifyDoctorsCanLoginToFxWebApp status=FAILURE method=FxSanity_Doctor.VerifyDoctorsCanLoginToFxWebApp()[pri:0, instance:com.frontierX.SanityScripts.FxSanity_Doctor@14bdbc74] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CloseDriverSession -->
+        <test-method is-config="true" signature="Initialize(java.lang.String)[pri:0, instance:com.frontierX.SanityScripts.FxSanity_Doctor@14bdbc74]" started-at="2022-06-30T14:21:34 IST" name="Initialize" finished-at="2022-06-30T14:21:46 IST" duration-ms="11782" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[prod]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Initialize -->
+        <test-method signature="VerifyDoctrsCanSearchPatients()[pri:0, instance:com.frontierX.SanityScripts.FxSanity_Doctor@14bdbc74]" started-at="2022-06-30T14:21:46 IST" name="VerifyDoctrsCanSearchPatients" description="Purpose of this test is to Verify Doctors can search any user in our system" finished-at="2022-06-30T14:22:19 IST" duration-ms="32801" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//div[@class='col-12 col-md-4']"}
+  (Session info: chrome=102.0.5005.115)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
+System info: host: 'DESKTOP-LBTBNFA', ip: '192.168.0.243', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 102.0.5005.115, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: C:\Users\user\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:63646}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 71624d925a5501ca3c5e68e000d1e945
+*** Element info: {Using=xpath, value=//div[@class='col-12 col-md-4']}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@class='col-12 col-md-4']"}
+  (Session info: chrome=102.0.5005.115)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
+System info: host: 'DESKTOP-LBTBNFA', ip: '192.168.0.243', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 102.0.5005.115, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: C:\Users\user\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:63646}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 71624d925a5501ca3c5e68e000d1e945
+*** Element info: {Using=xpath, value=//div[@class='col-12 col-md-4']}
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at jdk.proxy2/jdk.proxy2.$Proxy14.getText(Unknown Source)
+at com.frontierX.PageLibRepo.HomePageLib.VerifyIfSearchedUserAppeared(HomePageLib.java:361)
+at com.frontierX.SanityScripts.FxSanity_Doctor.VerifyDoctrsCanSearchPatients(FxSanity_Doctor.java:77)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyDoctrsCanSearchPatients -->
+        <test-method is-config="true" signature="CloseDriverSession(org.testng.ITestResult)[pri:0, instance:com.frontierX.SanityScripts.FxSanity_Doctor@14bdbc74]" started-at="2022-06-30T14:22:19 IST" name="CloseDriverSession" finished-at="2022-06-30T14:22:20 IST" duration-ms="625" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=VerifyDoctrsCanSearchPatients status=FAILURE method=FxSanity_Doctor.VerifyDoctrsCanSearchPatients()[pri:0, instance:com.frontierX.SanityScripts.FxSanity_Doctor@14bdbc74] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CloseDriverSession -->
+        <test-method is-config="true" signature="Initialize(java.lang.String)[pri:0, instance:com.frontierX.SanityScripts.FxSanity_Doctor@14bdbc74]" started-at="2022-06-30T14:22:20 IST" name="Initialize" finished-at="2022-06-30T14:22:30 IST" duration-ms="10179" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[prod]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Initialize -->
+        <test-method signature="VerifyLoggedInUser_DoctorUser()[pri:0, instance:com.frontierX.SanityScripts.FxSanity_Doctor@14bdbc74]" started-at="2022-06-30T14:22:30 IST" name="VerifyLoggedInUser_DoctorUser" description="Purpose of this test is to Verify Doctors can log in " finished-at="2022-06-30T14:22:34 IST" duration-ms="4038" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyLoggedInUser_DoctorUser -->
+        <test-method is-config="true" signature="CloseDriverSession(org.testng.ITestResult)[pri:0, instance:com.frontierX.SanityScripts.FxSanity_Doctor@14bdbc74]" started-at="2022-06-30T14:22:34 IST" name="CloseDriverSession" finished-at="2022-06-30T14:22:34 IST" duration-ms="566" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=VerifyLoggedInUser_DoctorUser status=SUCCESS method=FxSanity_Doctor.VerifyLoggedInUser_DoctorUser()[pri:0, instance:com.frontierX.SanityScripts.FxSanity_Doctor@14bdbc74] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CloseDriverSession -->
+        <test-method is-config="true" signature="Initialize(java.lang.String)[pri:0, instance:com.frontierX.SanityScripts.FxSanity_Doctor@14bdbc74]" started-at="2022-06-30T14:22:34 IST" name="Initialize" finished-at="2022-06-30T14:22:46 IST" duration-ms="11503" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[prod]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Initialize -->
+        <test-method signature="VerifyUserNameDisplayedOnDashboard_Doctors()[pri:0, instance:com.frontierX.SanityScripts.FxSanity_Doctor@14bdbc74]" started-at="2022-06-30T14:22:46 IST" name="VerifyUserNameDisplayedOnDashboard_Doctors" description="Purpose of this test is to Verify that current user&#039;s name is displayed when Doctors access any user&#039;s dashboard" finished-at="2022-06-30T14:23:17 IST" duration-ms="30841" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//div[@class='col-12 col-md-4']"}
+  (Session info: chrome=102.0.5005.115)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
+System info: host: 'DESKTOP-LBTBNFA', ip: '192.168.0.243', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 102.0.5005.115, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: C:\Users\user\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:64164}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 04f040d01519336a4d40fa6f68bbbf50
+*** Element info: {Using=xpath, value=//div[@class='col-12 col-md-4']}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@class='col-12 col-md-4']"}
+  (Session info: chrome=102.0.5005.115)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
+System info: host: 'DESKTOP-LBTBNFA', ip: '192.168.0.243', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 102.0.5005.115, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: C:\Users\user\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:64164}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 04f040d01519336a4d40fa6f68bbbf50
+*** Element info: {Using=xpath, value=//div[@class='col-12 col-md-4']}
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at jdk.proxy2/jdk.proxy2.$Proxy14.getText(Unknown Source)
+at com.frontierX.PageLibRepo.HomePageLib.VerifyIfSearchedUserAppeared(HomePageLib.java:361)
+at com.frontierX.SanityScripts.FxSanity_Doctor.VerifyUserNameDisplayedOnDashboard_Doctors(FxSanity_Doctor.java:91)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyUserNameDisplayedOnDashboard_Doctors -->
+        <test-method is-config="true" signature="CloseDriverSession(org.testng.ITestResult)[pri:0, instance:com.frontierX.SanityScripts.FxSanity_Doctor@14bdbc74]" started-at="2022-06-30T14:23:17 IST" name="CloseDriverSession" finished-at="2022-06-30T14:23:17 IST" duration-ms="537" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=VerifyUserNameDisplayedOnDashboard_Doctors status=FAILURE method=FxSanity_Doctor.VerifyUserNameDisplayedOnDashboard_Doctors()[pri:0, instance:com.frontierX.SanityScripts.FxSanity_Doctor@14bdbc74] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CloseDriverSession -->
+      </class> <!-- com.frontierX.SanityScripts.FxSanity_Doctor -->
+      <class name="com.frontierX.SanityScripts.FxSanity_Coach">
+        <test-method is-config="true" signature="SetEvidenceDir()[pri:0, instance:com.frontierX.SanityScripts.FxSanity_Coach@d2de489]" started-at="2022-06-30T14:20:55 IST" name="SetEvidenceDir" finished-at="2022-06-30T14:20:55 IST" duration-ms="11" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SetEvidenceDir -->
+        <test-method is-config="true" signature="Initialize(java.lang.String)[pri:0, instance:com.frontierX.SanityScripts.FxSanity_Coach@d2de489]" started-at="2022-06-30T14:20:55 IST" name="Initialize" finished-at="2022-06-30T14:21:15 IST" duration-ms="19319" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[prod]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Initialize -->
+        <test-method signature="VerifyFCPName()[pri:0, instance:com.frontierX.SanityScripts.FxSanity_Coach@d2de489]" started-at="2022-06-30T14:21:15 IST" name="VerifyFCPName" description="Purpose of this test is to Verify Fx Coach platform name is displayed " finished-at="2022-06-30T14:21:20 IST" duration-ms="5126" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyFCPName -->
+        <test-method is-config="true" signature="CloseDriverSession(org.testng.ITestResult)[pri:0, instance:com.frontierX.SanityScripts.FxSanity_Coach@d2de489]" started-at="2022-06-30T14:21:20 IST" name="CloseDriverSession" finished-at="2022-06-30T14:21:21 IST" duration-ms="1274" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=VerifyFCPName status=SUCCESS method=FxSanity_Coach.VerifyFCPName()[pri:0, instance:com.frontierX.SanityScripts.FxSanity_Coach@d2de489] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CloseDriverSession -->
+        <test-method is-config="true" signature="Initialize(java.lang.String)[pri:0, instance:com.frontierX.SanityScripts.FxSanity_Coach@d2de489]" started-at="2022-06-30T14:21:21 IST" name="Initialize" finished-at="2022-06-30T14:21:32 IST" duration-ms="11285" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[prod]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Initialize -->
+        <test-method signature="VerifyTrainersCanLoginToFxWebApp()[pri:0, instance:com.frontierX.SanityScripts.FxSanity_Coach@d2de489]" started-at="2022-06-30T14:21:32 IST" name="VerifyTrainersCanLoginToFxWebApp" description="Purpose of this test is to Verify that Fx Coach can Login to FX WebApp" finished-at="2022-06-30T14:21:53 IST" duration-ms="20135" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":".mini\-toastr\-notification__message"}
+  (Session info: chrome=102.0.5005.115)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
+System info: host: 'DESKTOP-LBTBNFA', ip: '192.168.0.243', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 102.0.5005.115, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: C:\Users\user\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:63524}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 01fa0b794fc69b5b384112a3a70bb287
+*** Element info: {Using=class name, value=mini-toastr-notification__message}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":".mini\-toastr\-notification__message"}
+  (Session info: chrome=102.0.5005.115)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
+System info: host: 'DESKTOP-LBTBNFA', ip: '192.168.0.243', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 102.0.5005.115, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: C:\Users\user\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:63524}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 01fa0b794fc69b5b384112a3a70bb287
+*** Element info: {Using=class name, value=mini-toastr-notification__message}
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByClassName(RemoteWebDriver.java:412)
+at org.openqa.selenium.By$ByClassName.findElement(By.java:389)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at jdk.proxy2/jdk.proxy2.$Proxy14.getText(Unknown Source)
+at com.frontierX.PageLibRepo.HomePageLib.VerifyUserInfoPopUp(HomePageLib.java:141)
+at com.frontierX.SanityScripts.FxSanity_Coach.VerifyTrainersCanLoginToFxWebApp(FxSanity_Coach.java:62)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyTrainersCanLoginToFxWebApp -->
+        <test-method is-config="true" signature="CloseDriverSession(org.testng.ITestResult)[pri:0, instance:com.frontierX.SanityScripts.FxSanity_Coach@d2de489]" started-at="2022-06-30T14:21:53 IST" name="CloseDriverSession" finished-at="2022-06-30T14:21:55 IST" duration-ms="2094" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=VerifyTrainersCanLoginToFxWebApp status=FAILURE method=FxSanity_Coach.VerifyTrainersCanLoginToFxWebApp()[pri:0, instance:com.frontierX.SanityScripts.FxSanity_Coach@d2de489] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CloseDriverSession -->
+      </class> <!-- com.frontierX.SanityScripts.FxSanity_Coach -->
+    </test> <!-- Daily Sanity -->
+  </suite> <!-- Admin User - Smoke Tests in Prod -->
+  <suite started-at="2022-06-30T14:24:12 IST" name="Prod Test Suite" finished-at="2022-06-30T14:24:12 IST" duration-ms="0">
+    <groups>
+    </groups>
+  </suite> <!-- Prod Test Suite -->
 </testng-results>
