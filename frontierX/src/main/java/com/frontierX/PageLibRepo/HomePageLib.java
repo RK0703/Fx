@@ -41,7 +41,7 @@ public class HomePageLib extends HomePageObj
 		String DeleteTagText = "This tag will no longer be accessible in both your app and web-app.";
 		private	String HealthEntryInfoMsg = "Health entry added";
 		
-		private List<String> ExpectedUserList = Arrays.asList("User", "FCP User", "Premium User","FHP Premium User","Doctor","Trainer","FHP Doctor","Admin");
+		private List<String> ExpectedUserList = Arrays.asList("User", "FCP User", "Premium User","FHP Premium User","Doctor","Coach","FHP Doctor","Admin");
 	
 		private List<String> ReportsOptions = Arrays.asList("12 Lead ECG", "Angiogram", "Blood Test","Ct Scan","Discharge Summary","Echocardiogram","Holter ","MRI Scan","Nuclear Scan","Procedure Summary","Stress Test","Other");
 	
