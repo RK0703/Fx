@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Prod Test Suite" preserve-order ="true">
-<!--
+
  <listeners>
         <listener class-name="com.frontierX.Utilities.CustomReport" />
         <listener class-name="com.frontierX.Utilities.TestNameListener" /> 
 </listeners>
--->
+
 <suite-files>
 	<suite-file path ="/WorkFlow_XMLs/FxWebRegression_User.xml"/>
 	<suite-file path ="/WorkFlow_XMLs/WebAppRegression.xml"/>

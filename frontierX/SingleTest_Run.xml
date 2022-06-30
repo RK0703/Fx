@@ -16,6 +16,13 @@ Custome Report with Screenshot attached.
 
 
 -->
+
+
+ <listeners>
+        <listener class-name="com.frontierX.Utilities.CustomReport" />
+        <listener class-name="com.frontierX.Utilities.TestNameListener" /> 
+</listeners>
+
 	<test name="Single Test Suite" parallel = "classes"> <!--parallel = "classes"> -->
 	<parameter name="enivironment" value="prod"/>
 	<!--<parameter name="user" value="user"/> -->

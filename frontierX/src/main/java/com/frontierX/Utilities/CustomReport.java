@@ -50,6 +50,8 @@ public class CustomReport implements IReporter
     private String ffx_Background = "<div data-v-517b4a5c=\"\" class=\"container-fluid img_background\"> </div>" ;
     
     private String localGoogleDriverMapper = "G:\\.shortcut-targets-by-id\\1_FpxrsdPY5eOoYYZ1SdoHTwUAL_8rx1b\\Prod Automation Report";
+    
+    private String CustomReportFolder = "/test-output/Fx Daily Reports/"; //"D:\\Gitwebapp\\frontierX\\test-output\\Custome Reports"
     @Override
     public void generateReport(List<XmlSuite> xmlSuites, List<ISuite> suites,
                                String outputDirectory) 
@@ -74,8 +76,9 @@ public class CustomReport implements IReporter
         writer.close();
         System.out.print("Please Find the Report stored locally at : "+outputDirectory+"\\"+outFilename.toString());
        
-     
-        CopyReportToQAFolderInGoogleDrive(outputDirectory+"\\"+outFilename.toString());
+        
+      //  CopyReportToQAFolderInGoogleDrive(outputDirectory+"\\"+outFilename.toString());
+        CopyReportToCustomeFolder(outputDirectory+"\\"+outFilename.toString());
         /*
         try 
         {
@@ -1025,8 +1028,21 @@ public class CustomReport implements IReporter
     	    e.printStackTrace();
     	}
     }
-    
-    
+ 
+    protected void CopyReportToCustomeFolder(String SourcLocation)
+    {
+    	File source = new File(SourcLocation);
+    	File dest = new File(CustomReportFolder);
+    	try 
+    	{
+    	    FileUtils.copyFileToDirectory(source, dest);
+    	    System.out.println("\nReport Copied to :" +dest.toPath().toString());
+    	} 
+    	catch (IOException e) 
+    	{
+    	    e.printStackTrace();
+    	}
+    }
     
     protected void UpdateExcelSheet()
     {

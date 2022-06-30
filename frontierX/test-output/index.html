@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -40,7 +40,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-TestNG_Reports" class="navigator-link">
-              <span class="suite-name border-passed">TestNG Reports</span>
+              <span class="suite-name border-failed">TestNG Reports</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -93,21 +93,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">1 method, 1 failed,   </span>
                   </li>
                   <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-TestNG_Reports" class="hide-methods passed suite-TestNG_Reports"> (hide)</a> <!-- hide-methods passed suite-TestNG_Reports -->
-                      <a href="#" panel-name="suite-TestNG_Reports" class="show-methods passed suite-TestNG_Reports"> (show)</a> <!-- show-methods passed suite-TestNG_Reports -->
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-TestNG_Reports" class="hide-methods failed suite-TestNG_Reports"> (hide)</a> <!-- hide-methods failed suite-TestNG_Reports -->
+                      <a href="#" panel-name="suite-TestNG_Reports" class="show-methods failed suite-TestNG_Reports"> (show)</a> <!-- show-methods failed suite-TestNG_Reports -->
                     </span>
-                    <div class="method-list-content passed suite-TestNG_Reports">
+                    <div class="method-list-content failed suite-TestNG_Reports">
                       <span>
-                        <img src="passed.png" width="3%"/>
+                        <img src="failed.png" width="3%"/>
                         <a href="#" panel-name="suite-TestNG_Reports" title="com.frontierX.TestScripts.PlayArea" class="method navigator-link" hash-for-method="PrintTL">PrintTL</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content passed suite-TestNG_Reports -->
+                    </div> <!-- method-list-content failed suite-TestNG_Reports -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -119,9 +119,9 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-TestNG_Reports" class="panel TestNG_Reports">
-          <div class="suite-TestNG_Reports-class-passed">
+          <div class="suite-TestNG_Reports-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
+              <img src="failed.png"/>
               <span class="class-name">com.frontierX.TestScripts.PlayArea</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -130,12 +130,35 @@
                   <a name="PrintTL">
                   </a> <!-- PrintTL -->
                   <span class="method-name">PrintTL</span>
+                  <div class="stack-trace">java.lang.AssertionError: Expected is Holter  Actual is Holter expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertTrue(Assert.java:45)
+	at com.frontierX.PageLibRepo.HomePageLib.VerifyReportDropDownOptions(HomePageLib.java:738)
+	at com.frontierX.TestScripts.PlayArea.PrintTL(PlayArea.java:78)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+</div> <!-- stack-trace -->
                   <em>
 (Purpose of this test is to Verify if Admin can login in)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-TestNG_Reports-class-passed -->
+          </div> <!-- suite-TestNG_Reports-class-failed -->
         </div> <!-- panel TestNG_Reports -->
         <div panel-name="test-xml-TestNG_Reports" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -146,6 +169,10 @@
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite configfailurepolicy=&quot;continue&quot; thread-count=&quot;2&quot; name=&quot;TestNG Reports&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;5&quot;&gt;
+  &lt;listeners&gt;
+    &lt;listener class-name=&quot;com.frontierX.Utilities.CustomReport&quot;/&gt;
+    &lt;listener class-name=&quot;com.frontierX.Utilities.TestNameListener&quot;/&gt;
+  &lt;/listeners&gt;
   &lt;test thread-count=&quot;2&quot; parallel=&quot;classes&quot; name=&quot;Single Test Suite&quot; verbose=&quot;5&quot;&gt;
     &lt;parameter name=&quot;enivironment&quot; value=&quot;prod&quot;/&gt;
     &lt;classes&gt;
@@ -193,12 +220,12 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'PrintTL')
 data.setCell(0, 2, 'com.frontierX.TestScripts.PlayArea')
-data.setCell(0, 3, 10377);
+data.setCell(0, 3, 8473);
 window.suiteTableData['TestNG_Reports']= { tableData: data, tableDiv: 'times-div-TestNG_Reports'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 10 seconds</span>
+              <span class="suite-total-time">Total running time: 8 seconds</span>
               <div id="times-div-TestNG_Reports">
               </div> <!-- times-div-TestNG_Reports -->
             </div> <!-- times-div -->
@@ -231,15 +258,17 @@ return data;
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">Initialize(prod)</span>
-                <span class="method-start">61 ms</span>
+                <span class="method-start">13 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">PrintTL</span>
-                <span class="method-start">10490 ms</span>
+                <span class="method-start">9232 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">CloseDriverSession([TestResult name=PrintTL status=SUCCESS method=PlayArea.PrintTL()[pri:0, instance:com.frontierX.Test...)</span>
-                <span class="method-start">20884 ms</span>
+                <span class="method-name">CloseDriverSession([TestResult name=PrintTL status=FAILURE method=PlayArea.PrintTL()[pri:0, instance:com.frontierX.Test...)</span>
+                <span class="method-start">17705 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
