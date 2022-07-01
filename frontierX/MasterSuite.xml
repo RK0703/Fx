@@ -8,11 +8,11 @@
 </listeners>
 
 <suite-files>
-	<suite-file path ="/WorkFlow_XMLs/FxWebRegression_User.xml"/>
+<!-- 	<suite-file path ="/WorkFlow_XMLs/FxWebRegression_User.xml"/> -->
 	<suite-file path ="/WorkFlow_XMLs/WebAppRegression.xml"/>
-    <suite-file path ="/WorkFlow_XMLs/FxWebRegression_Admin.xml"/>
+  <!--  <suite-file path ="/WorkFlow_XMLs/FxWebRegression_Admin.xml"/>
 	<suite-file path ="/WorkFlow_XMLs/FxWebRegression_PremiumUser.xml"/>
-	<suite-file path ="/WorkFlow_XMLs/FxWebRegression_Doctors.xml"/>
+	<suite-file path ="/WorkFlow_XMLs/FxWebRegression_Doctors.xml"/> -->
 
 </suite-files>
 </suite>
