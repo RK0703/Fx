@@ -35,7 +35,7 @@ public class PlayArea extends FxSettings
     {
 	 this.driver = DecideEnvironment(env);
 	 login = new LoginPageLib(driver);
-	 homeObj = login.login("ravikiran@fourthfrontier.com",FxUtilities.DecryptPass("MTIzNDEyMzQ="));
+	 homeObj = login.login("admin@fourthfrontier.com", FxUtilities.DecryptPass("YXV0b21hdGlvbjRm"));
     }
 	 
 	 @AfterMethod
@@ -62,23 +62,18 @@ private void SetEvidenceDir()
 		
 	
 		
-@Test(description = "Purpose of this test is to Verify if Admin can login in")
-public void PrintTL() throws Exception
+@Test(description = "Purpose of this test is to Verify elements of Add Coach pop up")
+public void VerifyAddCoach() throws InterruptedException 
 {		
-	Thread.sleep(3000);
-	homeObj.ClickAddReportBtn();
-	Thread.sleep(3000);
-	homeObj.VerifyAddReportScreen();
-	
-	
-	
-	
-	
-	
-	homeObj.VerifyReportDropDownOptions();
-	
-	
-	
+	justSleepFor(3);
+	homeObj.clickOnAdminMenu();
+	justSleepFor(1);
+	homeObj.clickOnAdminPanel();
+	justSleepFor(4);
+	homeObj.ClickOnAddCoachButton();
+	justSleepFor(2);
+	homeObj.VerifyAddCoachPopUp();
+
 }
 /*
  * 

@@ -125,29 +125,7 @@ private void SetEvidenceDir()
 				homeObj.VerifyIfSearchedUserAppeared("ravikiran@fourthfrontier.com");
 				homeObj.VerifyUserLevelOptions();
 			}
-		
-		
-		
-		
-	//	@Test (description = "Purpose of this test is to Verify that current user's name is displayed when admin access any user's dashboard")
-		public void VerifyECGPDFPopUp()
-		{			
-					String UserName = "Ravikiran";
-					justSleepFor(3);
-					homeObj.clickOnAdminMenu();
-					justSleepFor(1);
-					homeObj.clickOnAdminPanel();
-					justSleepFor(4);
-					homeObj.SearchUsers("ravikiran@fourthfrontier.com");
-					justSleepFor(2);
-					homeObj.VerifyIfSearchedUserAppeared("ravikiran@fourthfrontier.com");
-					homeObj.SelectDisplyedUser();
-					justSleepFor(6);
-					homeObj.VerifyUserNameIsDisplayedForUser(UserName);	
-					homeObj.clickOnActivityButton();
-					homeObj.ClickgenerateECGPDF();
-					homeObj.VerifyECGPDFPopUp();
-		 }
+		 
 		
 		@Test(description = "Purpose of this test is to Verify if Admin can login in")
 		public void VerifyLoggedInUser_AdminUser() throws Exception

@@ -323,6 +323,27 @@ public class HomePageLib extends HomePageObj
 	}
 	
 	/*
+	 * Method to click on Add Coach button
+	 */
+	public void ClickOnAddCoachButton()
+	{
+		AddCoachBtn.click();
+	}
+	
+	/*
+	 * Method to click on Add Coach button
+	 */
+	public void VerifyAddCoachPopUp()
+	{
+		Assert.assertTrue(Coach_FirstName.isDisplayed());
+		Assert.assertTrue(Coach_LastName.isDisplayed());
+		Assert.assertTrue(Coach_email.isDisplayed());
+		Assert.assertTrue(Coach_deviceLink.isDisplayed());
+		
+	}
+	
+	
+	/*
 	 * Method to search users in Admin panel
 	 */
     

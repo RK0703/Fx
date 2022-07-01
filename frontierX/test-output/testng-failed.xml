@@ -1,57 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Admin User - Smoke Tests in Prod]" guice-stage="DEVELOPMENT">
-  <parameter name="enivironment" value="prod"/>
+<suite configfailurepolicy="continue" thread-count="2" name="Failed suite [TestNG Reports]" guice-stage="DEVELOPMENT" verbose="5">
   <listeners>
     <listener class-name="com.frontierX.Utilities.CustomReport"/>
     <listener class-name="com.frontierX.Utilities.TestNameListener"/>
   </listeners>
-  <test thread-count="5" parallel="classes" name="Daily Sanity(failed)">
+  <test thread-count="2" parallel="classes" name="Single Test Suite(failed)" verbose="5">
+    <parameter name="enivironment" value="prod"/>
     <classes>
-      <class name="com.frontierX.SanityScripts.FxSanity_User">
+      <class name="com.frontierX.TestScripts.PlayArea">
         <methods>
-          <include name="CloseDriverSession"/>
-          <include name="SetEvidenceDir"/>
-          <include name="Initialize"/>
-          <include name="VerifyTrainingLoad"/>
-        </methods>
-      </class> <!-- com.frontierX.SanityScripts.FxSanity_User -->
-      <class name="com.frontierX.SanityScripts.FxSanity_Doctor">
-        <methods>
-          <include name="CloseDriverSession"/>
-          <include name="VerifyDoctorsCanLoginToFxWebApp"/>
-          <include name="SetEvidenceDir"/>
-          <include name="VerifyDoctrsCanSearchPatients"/>
-          <include name="Initialize"/>
-          <include name="VerifyUserNameDisplayedOnDashboard_Doctors"/>
-        </methods>
-      </class> <!-- com.frontierX.SanityScripts.FxSanity_Doctor -->
-      <class name="com.frontierX.SanityScripts.FxSanity_Coach">
-        <methods>
-          <include name="Initialize"/>
-          <include name="CloseDriverSession"/>
-          <include name="SetEvidenceDir"/>
-          <include name="VerifyTrainersCanLoginToFxWebApp"/>
-        </methods>
-      </class> <!-- com.frontierX.SanityScripts.FxSanity_Coach -->
-      <class name="com.frontierX.SanityScripts.FxSanity_Admin">
-        <methods>
-          <include name="SetEvidenceDir"/>
-          <include name="CloseDriverSession"/>
-          <include name="VerifyUserLevelChangesAreSaved"/>
-          <include name="VerifyUserLevelsDropDown"/>
-          <include name="Initialize"/>
-        </methods>
-      </class> <!-- com.frontierX.SanityScripts.FxSanity_Admin -->
-      <class name="com.frontierX.SanityScripts.FxSanity_PremiumUser">
-        <methods>
-          <include name="VerifyPremiumUsersCanLoginToFxWebApp"/>
-          <include name="VerifyECGPDFPopUp_PremiumUser"/>
+          <include name="VerifyAddCoach"/>
           <include name="CloseDriverSession"/>
           <include name="SetEvidenceDir"/>
           <include name="Initialize"/>
         </methods>
-      </class> <!-- com.frontierX.SanityScripts.FxSanity_PremiumUser -->
+      </class> <!-- com.frontierX.TestScripts.PlayArea -->
     </classes>
-  </test> <!-- Daily Sanity(failed) -->
-</suite> <!-- Failed suite [Admin User - Smoke Tests in Prod] -->
+  </test> <!-- Single Test Suite(failed) -->
+</suite> <!-- Failed suite [TestNG Reports] -->
