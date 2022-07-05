@@ -1,12 +1,6 @@
 package com.frontierX.TestScripts;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.testng.Assert;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
@@ -15,9 +9,9 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.frontierX.BaseSettings.FxSettings;
+import com.frontierX.PageLibRepo.AdminPageLib;
 import com.frontierX.PageLibRepo.HomePageLib;
 import com.frontierX.PageLibRepo.LoginPageLib;
-import com.frontierX.PageLibRepo.WorkoutDetailsPageLib;
 import com.frontierX.Utilities.FxUtilities;
 
 public class PlayArea extends FxSettings
@@ -25,6 +19,7 @@ public class PlayArea extends FxSettings
 	 WebDriver driver = null ;
 	 LoginPageLib login ;
 	 HomePageLib homeObj ;
+	 AdminPageLib adminLib;
 	 String expectedInfoTxt = "User's information updated successfully." ;
 	 
 	 String ClassName = this.getClass().getSimpleName().toString();
@@ -35,6 +30,7 @@ public class PlayArea extends FxSettings
     {
 	 this.driver = DecideEnvironment(env);
 	 login = new LoginPageLib(driver);
+	 adminLib = new AdminPageLib(driver);
 	 homeObj = login.login("admin@fourthfrontier.com", FxUtilities.DecryptPass("YXV0b21hdGlvbjRm"));
     }
 	 
@@ -57,11 +53,7 @@ private void SetEvidenceDir()
 	FxUtilities.createDateBasedDirectory();
 	
 }
-		
-	
-		
-	
-		
+			
 @Test(description = "Purpose of this test is to Verify elements of Add Coach pop up")
 public void VerifyAddCoach() throws InterruptedException 
 {		
@@ -70,9 +62,9 @@ public void VerifyAddCoach() throws InterruptedException
 	justSleepFor(1);
 	homeObj.clickOnAdminPanel();
 	justSleepFor(4);
-	homeObj.ClickOnAddCoachButton();
+	adminLib.ClickOnAddCoachButton();
 	justSleepFor(2);
-	homeObj.VerifyAddCoachPopUp();
+	//adminLib.VerifyAddCoachPopUp();
 
 }
 /*

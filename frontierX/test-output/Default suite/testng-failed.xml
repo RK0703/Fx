@@ -5,10 +5,10 @@
     <classes>
       <class name="com.frontierX.TestScripts.PlayArea">
         <methods>
+          <include name="VerifyAddCoach"/>
           <include name="CloseDriverSession"/>
           <include name="SetEvidenceDir"/>
           <include name="Initialize"/>
-          <include name="PrintTL"/>
         </methods>
       </class> <!-- com.frontierX.TestScripts.PlayArea -->
     </classes>
