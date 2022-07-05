@@ -52,18 +52,6 @@ private void SetEvidenceDir()
 	FxUtilities.createDateBasedDirectory();
 	
 }
-	 @Test (description = "Purpose of this test is to Verify that Fx Coach can Login to FX WebApp")
-		public void VerifyTrainersCanLoginToFxWebApp() throws Exception
-		{
-		
-			    String expectedText= "User Logged In Successfully";
-					
-			    homeObj.VerifyUserInfoPopUp(expectedText);	
-		}
-		
-	
-	 
-	 
 		@Test (description = "Purpose of this test is to Verify that Health Treand Web Page opens and displays related Charts for Trainer level ")
 			public void VerifyHealthTreandPageDisplays_TrainerLevel() throws Exception
 			{		
@@ -72,15 +60,15 @@ private void SetEvidenceDir()
 							heartHealthObj.VerifyChartsAreDisplayed();
 			} 
 		
-	 @Test(description = "Purpose of this test is to Verify Fx Coach platform name is displayed ")
-		public void VerifyFCPName() throws Exception
-		{		
-			justSleepFor(3);
-			homeObj.clickOnAdminMenu();
-			justSleepFor(1);
-			homeObj.VerifyFCPName();
-			
-		}
+		 @Test(description = "Purpose of this test is to Verify Fx Coach can log in and correct platform name is displayed ")
+			public void VerifyFCPName() throws Exception
+			{		
+				justSleepFor(3);
+				homeObj.clickOnAdminMenu();
+				justSleepFor(1);
+				homeObj.VerifyFCPName();
+				
+			}
 		
 /*
  * 
