@@ -67,8 +67,8 @@ public class FxWebApp_Regression extends FxSettings
 		 
 		 if (result.getStatus() == ITestResult.SUCCESS && result.getMethod().getMethodName().equals("VerifyDeleteTagPopUpText"))
 		 {
-			System.out.println("Deleting the added HeathTag as Clean up for next run");
-			homeObj.ClickOnDeleteBtn_Tag();
+			//System.out.println("Deleting the added HeathTag as Clean up for next run");
+			//homeObj.ClickOnDeleteBtn_Tag();
 		 } 
 		 
 			 driver.quit();

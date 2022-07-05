@@ -9,6 +9,7 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.frontierX.BaseSettings.FxSettings;
+import com.frontierX.PageLibRepo.HeartHealthPageLib;
 import com.frontierX.PageLibRepo.HomePageLib;
 import com.frontierX.PageLibRepo.LoginPageLib;
 import com.frontierX.Utilities.FxUtilities;
@@ -148,6 +149,16 @@ private void SetEvidenceDir()
 						justSleepFor(4);
 						homeObj.VerifyLoggedInUserName(UserLevel.Admin.toString());
 		}
+		
+		
+		@Test (description = "Purpose of this test is to Verify that Health Treand Web Page opens and displays related Charts for Admin level ")
+		public void VerifyHealthTreandPageDisplays_AdminLevel() throws Exception
+		{		
+			HeartHealthPageLib heartHealthObj = new HeartHealthPageLib(driver);
+						homeObj.ClickHealthTrendBtn();
+						heartHealthObj.VerifyChartsAreDisplayed();
+		}
+		
 /*
  * 
  * 

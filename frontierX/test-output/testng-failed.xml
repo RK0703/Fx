@@ -10,9 +10,9 @@
     <classes>
       <class name="com.frontierX.TestScripts.PlayArea">
         <methods>
-          <include name="VerifyAddCoach"/>
           <include name="CloseDriverSession"/>
           <include name="SetEvidenceDir"/>
+          <include name="VerifyHealthEntryAddedAndDeleted"/>
           <include name="Initialize"/>
         </methods>
       </class> <!-- com.frontierX.TestScripts.PlayArea -->

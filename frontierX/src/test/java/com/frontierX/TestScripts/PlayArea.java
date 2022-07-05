@@ -1,6 +1,7 @@
 package com.frontierX.TestScripts;
 
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
@@ -53,20 +54,31 @@ private void SetEvidenceDir()
 	FxUtilities.createDateBasedDirectory();
 	
 }
-			
-@Test(description = "Purpose of this test is to Verify elements of Add Coach pop up")
-public void VerifyAddCoach() throws InterruptedException 
-{		
-	justSleepFor(3);
-	homeObj.clickOnAdminMenu();
-	justSleepFor(1);
-	homeObj.clickOnAdminPanel();
-	justSleepFor(4);
-	adminLib.ClickOnAddCoachButton();
-	justSleepFor(2);
-	//adminLib.VerifyAddCoachPopUp();
 
-}
+@Test (description = "Purpose of this test is to Verify that User Can Add Health Tag and Verifies if its displayed on Web App and Delete the same")
+	public void VerifyHealthEntryAddedAndDeleted() throws Exception
+	
+	{				String DeleteTagNotificationText = "Health Entry Deleted: 1";
+			String ExpectedVal = "SpO2 - 98 %";
+			 Thread.sleep(6000);
+					homeObj.ClickOnAddHealtEntry();
+					homeObj.SelectVitals();
+					homeObj.ClickOnsPO2Tag();
+					homeObj.EnterHealthTagDetails("98","Test");
+					Thread.sleep(4000);
+					homeObj.VerifyHealthTagIsDisplayed(ExpectedVal);
+					
+					// Delete the tag and verify the same
+					Thread.sleep(3000);
+					homeObj.clickOnActivityButton();
+					homeObj.ClickOnDeleteTag();
+					Thread.sleep(2000);
+					homeObj.VerifyDeletePopUpText();
+					Thread.sleep(3000);
+					homeObj.ClickOnDeleteBtn_Tag();
+					Assert.assertEquals(homeObj.GetNotificationText(),DeleteTagNotificationText);
+	}
+
 /*
  * 
  * 
