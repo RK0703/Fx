@@ -327,7 +327,7 @@ public class HomePageLib extends HomePageObj
 	 */
 	public void ClickOnAddCoachButton()
 	{
-		AddCoachBtn.click();
+		//AddCoachBtn.click();
 	}
 	
 	/*
@@ -335,10 +335,10 @@ public class HomePageLib extends HomePageObj
 	 */
 	public void VerifyAddCoachPopUp()
 	{
-		Assert.assertTrue(Coach_FirstName.isDisplayed());
-		Assert.assertTrue(Coach_LastName.isDisplayed());
-		Assert.assertTrue(Coach_email.isDisplayed());
-		Assert.assertTrue(Coach_deviceLink.isDisplayed());
+		//Assert.assertTrue(Coach_FirstName.isDisplayed());
+		//Assert.assertTrue(Coach_LastName.isDisplayed());
+		//Assert.assertTrue(Coach_email.isDisplayed());
+		//Assert.assertTrue(Coach_deviceLink.isDisplayed());
 		
 	}
 	

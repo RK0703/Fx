@@ -225,6 +225,7 @@ public class HomePageObj extends FxBasePage
 
 	protected WebElement CancelBtn_AR = driver.findElement(By.xpath("//body/div/div/div/div/div[2]/button[1]"));
 	
+	/*
 	protected WebElement AddCoachBtn = driver.findElement(By.xpath("//button[@id='addNewTrainerBtn']"));
 	protected WebElement Coach_FirstName = driver.findElement(By.id("first_name"));
 	
@@ -233,7 +234,7 @@ public class HomePageObj extends FxBasePage
 	protected WebElement Coach_email = driver.findElement(By.id("trainer_email"));
 	
 	protected WebElement Coach_deviceLink = driver.findElement(By.id("device_purchase_link"));
-	
+	*/
 	//	Constructor
 	public HomePageObj(WebDriver driver) 
 	{
