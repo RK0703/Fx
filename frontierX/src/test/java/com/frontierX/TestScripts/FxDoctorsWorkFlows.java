@@ -12,6 +12,7 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.frontierX.BaseSettings.FxSettings;
+import com.frontierX.PageLibRepo.HeartHealthPageLib;
 import com.frontierX.PageLibRepo.HomePageLib;
 import com.frontierX.PageLibRepo.LoginPageLib;
 import com.frontierX.Utilities.FxUtilities;
@@ -74,6 +75,19 @@ private void SetEvidenceDir()
 					justSleepFor(2);
 					homeObj.VerifyIfSearchedUserAppeared("premium@fourthfrontier.com");
 		 }
+		
+		 
+		@Test (description = "Purpose of this test is to Verify that Health Treand Web Page opens and displays related Charts for Doctor level ")
+			public void VerifyHealthTreandPageDisplays_DoctorLevel() throws Exception
+			{		
+				HeartHealthPageLib heartHealthObj = new HeartHealthPageLib(driver);
+							homeObj.ClickHealthTrendBtn();
+							heartHealthObj.VerifyChartsAreDisplayed();
+			}
+		
+		
+		
+		
 		
 		@Test (description = "Purpose of this test is to Verify that current user's name is displayed when Doctors access any user's dashboard")
 		public void VerifyUserNameDisplayedOnDashboard_Doctors()
