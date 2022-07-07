@@ -59,22 +59,7 @@ private void SetEvidenceDir()
 			    homeObj.VerifyUserInfoPopUp(expectedText);	
 		}
 		
-	
-		@Test (description = "Purpose of this test is to Verify Doctors can search any user in our system")
-		
-		public void VerifyDoctrsCanSearchPatients()
-		{			
-					justSleepFor(3);
-					homeObj.clickOnAdminMenu();
-					justSleepFor(1);
-					homeObj.clickOnAdminPanel();
-					justSleepFor(4);
-					homeObj.SearchUsers("premium@fourthfrontier.com");
-					justSleepFor(2);
-					homeObj.VerifyIfSearchedUserAppeared("premium@fourthfrontier.com");
-		 }
-		
-		@Test (description = "Purpose of this test is to Verify that current user's name is displayed when Doctors access any user's dashboard")
+	//	@Test (description = "Purpose of this test is to Verify that current user's name is displayed when Doctors access any user's dashboard")
 		public void VerifyUserNameDisplayedOnDashboard_Doctors()
 		{			
 					String UserName = "Ravikiran";
