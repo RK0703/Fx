@@ -152,7 +152,7 @@ public class FxWebApp_Regression extends FxSettings
 						homeObj.clickOnActivityButton();
 						homeObj.ClickOnDeleteTag();
 						Thread.sleep(2000);
-						homeObj.VerifyDeletePopUpText();
+						//homeObj.VerifyDeletePopUpText();
 						Thread.sleep(3000);
 					//	homeObj.ClickOnDeleteBtn_Tag();
 					//	Assert.assertEquals(homeObj.GetNotificationText(),DeleteTagNotificationText);
