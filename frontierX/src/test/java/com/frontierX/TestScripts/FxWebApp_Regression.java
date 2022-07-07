@@ -154,8 +154,8 @@ public class FxWebApp_Regression extends FxSettings
 						Thread.sleep(2000);
 						homeObj.VerifyDeletePopUpText();
 						Thread.sleep(3000);
-						homeObj.ClickOnDeleteBtn_Tag();
-						Assert.assertEquals(homeObj.GetNotificationText(),DeleteTagNotificationText);
+					//	homeObj.ClickOnDeleteBtn_Tag();
+					//	Assert.assertEquals(homeObj.GetNotificationText(),DeleteTagNotificationText);
 		}
 	 
 		@Test (description = "Purpose of this test is to Verify that user can Download FIT File of lenght 40K and 10K of GPS Data")

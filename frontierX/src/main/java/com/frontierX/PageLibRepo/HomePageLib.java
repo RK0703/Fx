@@ -686,7 +686,7 @@ public class HomePageLib extends HomePageObj
 	
 	public void ClickOnDeleteBtn_Tag()
 	{
-		DeleteTagBtn.click();
+	//	DeleteTagBtn.click();
 	}
 	
 	public void cancelButtonEdit() 
