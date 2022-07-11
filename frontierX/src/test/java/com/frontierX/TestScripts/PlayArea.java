@@ -58,9 +58,10 @@ private void SetEvidenceDir()
 @Test (description = "Purpose of this test is to Verify that User Can Add Health Tag and Verifies if its displayed on Web App and Delete the same")
 	public void VerifyHealthEntryAddedAndDeleted() throws Exception
 	
-	{				String DeleteTagNotificationText = "Health Entry Deleted: 1";
-			String ExpectedVal = "SpO2 - 98 %";
-			 Thread.sleep(6000);
+	{	
+				String DeleteTagNotificationText = "Health Entry Deleted: 1";
+				String ExpectedVal = "SpO2 - 98 %";
+				Thread.sleep(6000);
 					homeObj.ClickOnAddHealtEntry();
 					homeObj.SelectVitals();
 					homeObj.ClickOnsPO2Tag();
@@ -73,9 +74,9 @@ private void SetEvidenceDir()
 					homeObj.clickOnActivityButton();
 					homeObj.ClickOnDeleteTag();
 					Thread.sleep(2000);
-					homeObj.VerifyDeletePopUpText();
+					//homeObj.VerifyDeletePopUpText();
 					Thread.sleep(3000);
-					homeObj.ClickOnDeleteBtn_Tag();
+					//homeObj.ClickOnDeleteBtn_Tag();
 					Assert.assertEquals(homeObj.GetNotificationText(),DeleteTagNotificationText);
 	}
 

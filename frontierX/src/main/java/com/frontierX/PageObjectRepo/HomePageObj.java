@@ -145,7 +145,7 @@ public class HomePageObj extends FxBasePage
 	
 //	protected WebElement DeleteTagBtn = driver.findElement(By.xpath("//body/div[5]/div[2]/div[1]/div[1]/div[1]/button[2]"));
 	
-	protected WebElement DeletePopUpText = driver.findElement(By.xpath("//body/div[5]/div[2]/div[1]/div[1]"));
+	//protected WebElement DeletePopUpText = driver.findElement(By.xpath("//body/div[5]/div[2]/div[1]/div[1]"));
 
 	@FindBy(xpath = "//span[@class='col-lg-4 col-11 w-name-info']") 
 	protected WebElement HealthEntryInfoBtn;
