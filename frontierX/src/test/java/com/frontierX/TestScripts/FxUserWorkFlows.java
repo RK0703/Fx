@@ -154,13 +154,4 @@ private void SetEvidenceDir()
 		Thread.sleep(3000);
 		homeObj.VerifyAddReportScreen();
 	}
-	
-
-	@Test (description = "Purpose of this test is to Verify that Health Treand Web Page opens and displays related Charts ")
-	public void VerifyHealthTreandPageDisplays() throws Exception
-	{		
-		HeartHealthPageLib heartHealthObj = new HeartHealthPageLib(driver);
-					homeObj.ClickHealthTrendBtn();
-					heartHealthObj.VerifyChartsAreDisplayed();
-	}
 }

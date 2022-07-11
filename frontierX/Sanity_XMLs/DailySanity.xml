@@ -4,11 +4,11 @@
 <parameter name="enivironment" value="prod" />
   <test name="Daily Sanity">
     <classes> 
-		 <class name="com.frontierX.SanityScripts.FxSanity_Admin"/>
+		<class name="com.frontierX.SanityScripts.FxSanity_Admin"/>
 		<class name="com.frontierX.SanityScripts.FxSanity_Coach"/>
 		<class name="com.frontierX.SanityScripts.FxSanity_Doctor"/> 	
 		<class name="com.frontierX.SanityScripts.FxSanity_PremiumUser"/> 
-		<class name="com.frontierX.SanityScripts.FxSanity_User"/> 
+		<!-- <class name="com.frontierX.SanityScripts.FxSanity_User"/> -->
     </classes>
   </test>
 </suite> <!-- Suite -->
