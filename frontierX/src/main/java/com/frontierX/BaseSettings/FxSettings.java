@@ -35,7 +35,7 @@ public abstract class FxSettings //extends TestListenerAdapter
 		else
 		{
 			String chromeKey = "webdriver.chrome.driver";
-			String chromeDriverPath = "/usr/lib/chromium-browser/chromedriver";
+			String chromeDriverPath = "/var/lib/jenkins/workspace/Demo/frontierX/drivers/Ubuntu/chromedriver";
 			
 			System.setProperty(chromeKey, chromeDriverPath);
 			System.out.println("Launching Chrome in Environment : " +FxUtilities.getOperatingSystemSystemUtils());
