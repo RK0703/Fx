@@ -17,6 +17,12 @@ public abstract class FxSettings //extends TestListenerAdapter
 {
 	protected  WebDriver driver ;
 	
+	
+	/*
+	 * This Logic will reads the OS , 
+	 * if Windows specific to win chrome driver will launch 
+	 * else Chrome driver comptible to Ubuntu will launch
+	 */
 	static 
 	{
 		if (FxUtilities.getOperatingSystemSystemUtils().contains("Win"))
@@ -29,17 +35,13 @@ public abstract class FxSettings //extends TestListenerAdapter
 		else
 		{
 			String chromeKey = "webdriver.chrome.driver";
-			String chromeDriverPath = "/var/jenkins/workspace/Demo/frontierX/drivers/chromedriverUbuntu";
+			String chromeDriverPath = "/var/jenkins/workspace/Demo/frontierX/drivers/Ubuntu/chromedriver";
 			
 			System.setProperty(chromeKey, chromeDriverPath);
 			System.out.println("Launching Chrome in Environment : " +FxUtilities.getOperatingSystemSystemUtils());
 		}
 		
 	}
-	
-	
-	
-	
 	
 	
 	public static long justSleepFor(long seconds)
