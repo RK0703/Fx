@@ -52,13 +52,7 @@ private void SetEvidenceDir()
 	FxUtilities.createDateBasedDirectory();
 	
 }
-		@Test (description = "Purpose of this test is to Verify that Health Treand Web Page opens and displays related Charts for Trainer level ")
-			public void VerifyHealthTreandPageDisplays_TrainerLevel() throws Exception
-			{		
-				HeartHealthPageLib heartHealthObj = new HeartHealthPageLib(driver);
-							homeObj.ClickHealthTrendBtn();
-							heartHealthObj.VerifyChartsAreDisplayed();
-			} 
+		
 		
 		 @Test(description = "Purpose of this test is to Verify Fx Coach can log in and correct platform name is displayed ")
 			public void VerifyFCPName() throws Exception

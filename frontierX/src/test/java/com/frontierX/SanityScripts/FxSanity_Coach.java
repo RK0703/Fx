@@ -77,6 +77,15 @@ private void SetEvidenceDir()
 						homeObj.ClickHealthTrendBtn();
 						heartHealthObj.VerifyChartsAreDisplayed();
 		} 
+	 
+	 
+	 @Test(description = "Purpose of this test is to Verify Elements in Web App for FCP User")
+		public void VerifyHomePageElements_FCPUser() throws Exception
+		{		
+						justSleepFor(4);
+						homeObj.VerifyHomePageElements();
+		}
+	 
 		
 /*
  * 

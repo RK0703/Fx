@@ -127,13 +127,7 @@ private void SetEvidenceDir()
 				homeObj.VerifyUserLevelOptions();
 			}
 		 
-		@Test (description = "Purpose of this test is to Verify that Health Treand Web Page opens and displays related Charts for Admin level ")
-			public void VerifyHealthTreandPageDisplays_AdminLevel() throws Exception
-			{		
-				HeartHealthPageLib heartHealthObj = new HeartHealthPageLib(driver);
-							homeObj.ClickHealthTrendBtn();
-							heartHealthObj.VerifyChartsAreDisplayed();
-			}
+	
 		 
 		 
 		

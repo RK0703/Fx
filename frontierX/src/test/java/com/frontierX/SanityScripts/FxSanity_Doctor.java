@@ -94,7 +94,12 @@ private void SetEvidenceDir()
 				}
 			
 		
-		
+			 @Test(description = "Purpose of this test is to Verify Elements in Web App for Doc User")
+				public void VerifyHomePageElements_DoctorUser() throws Exception
+				{		
+								justSleepFor(4);
+								homeObj.VerifyHomePageElements();
+				}
 		
 		
 /*

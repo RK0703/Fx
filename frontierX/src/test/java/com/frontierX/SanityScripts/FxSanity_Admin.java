@@ -159,6 +159,16 @@ private void SetEvidenceDir()
 						heartHealthObj.VerifyChartsAreDisplayed();
 		}
 		
+		 @Test(description = "Purpose of this test is to Verify Elements in Web App for Admin User")
+			public void VerifyHomePageElements_AdminUser() throws Exception
+			{		
+							justSleepFor(4);
+							homeObj.VerifyHomePageElements();
+			}
+			
+		
+		
+		
 /*
  * 
  * 

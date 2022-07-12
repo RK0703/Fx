@@ -76,15 +76,7 @@ private void SetEvidenceDir()
 					homeObj.VerifyIfSearchedUserAppeared("premium@fourthfrontier.com");
 		 }
 		
-		 
-		@Test (description = "Purpose of this test is to Verify that Health Treand Web Page opens and displays related Charts for Doctor level ")
-			public void VerifyHealthTreandPageDisplays_DoctorLevel() throws Exception
-			{		
-				HeartHealthPageLib heartHealthObj = new HeartHealthPageLib(driver);
-							homeObj.ClickHealthTrendBtn();
-							heartHealthObj.VerifyChartsAreDisplayed();
-			}
-		
+	
 		
 		
 		
@@ -132,14 +124,5 @@ private void SetEvidenceDir()
 		{		
 						justSleepFor(4);
 						homeObj.VerifyLoggedInUserName(UserLevel.Doctor.toString());
-		}
-/*
- * 
- * Healper Methods
- */
-	 
-		
-		
-		
-		
+		}		
 }
