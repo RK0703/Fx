@@ -63,7 +63,7 @@ private void SetEvidenceDir()
 		}
 	 
 		
-	 @Test (description = "Purpose of this test is to Verify that Premium user can Download FIT File and verifies if its valid or not based on length of file")
+	// @Test (description = "Purpose of this test is to Verify that Premium user can Download FIT File and verifies if its valid or not based on length of file")
 		public void VerifyPremiumUserCanDownloadFITFiles() throws Exception
 		{
 		 
