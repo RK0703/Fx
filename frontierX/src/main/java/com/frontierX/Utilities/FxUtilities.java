@@ -285,5 +285,14 @@ public class FxUtilities
 		   // System.out.println("New Directory name is "+newDir);
 		}
 		
+		public static String getOperatingSystemSystemUtils()
+		{
+		 String os = System.getProperty("os.name");
+		    // System.out.println("Using SystemUtils: " + os);
+		    System.out.println("OS is : "+os);
+		    return os;
+		}
+		
+		
 		
 }

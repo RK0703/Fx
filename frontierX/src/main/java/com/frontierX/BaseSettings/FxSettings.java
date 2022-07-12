@@ -19,25 +19,26 @@ public abstract class FxSettings //extends TestListenerAdapter
 	
 	static 
 	{
-			//		chromeDriver
-		String chromeKey = "webdriver.chrome.driver";
-		String chromeDriverPath = "./drivers/chromedriver.exe";
-		
-		System.setProperty(chromeKey, chromeDriverPath);
-		
-			//		mozillaDriver
-		String firefoxKey = "webdriver.gecko.driver";
-		String firefoxDriverPath = "./drivers/geckodriver.exe";
-		
-		System.setProperty(firefoxKey, firefoxDriverPath);
-		
-			//		ieDriver
-		String ieKey = "webdriver.ie.driver";
-		String ieDriverPath = "./drivers/IEDriverServer.exe";
-		
-		System.setProperty(ieKey, ieDriverPath);
+		if (FxUtilities.getOperatingSystemSystemUtils().contains("Win"))
+		{
+			String chromeKey = "webdriver.chrome.driver";
+			String chromeDriverPath = "./drivers/chromedriver.exe";
+			
+			System.setProperty(chromeKey, chromeDriverPath);
+		}
+		else
+		{
+			String chromeKey = "webdriver.chrome.driver";
+			String chromeDriverPath = "./drivers/chromedriverUbuntu";
+			
+			System.setProperty(chromeKey, chromeDriverPath);
+		}
 		
 	}
+	
+	
+	
+	
 	
 	
 	public static long justSleepFor(long seconds)

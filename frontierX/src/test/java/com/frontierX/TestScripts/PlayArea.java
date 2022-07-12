@@ -29,10 +29,11 @@ public class PlayArea extends FxSettings
 	 @BeforeMethod
     private void Initialize(String env)
     {
-	 this.driver = DecideEnvironment(env);
-	 login = new LoginPageLib(driver);
-	 adminLib = new AdminPageLib(driver);
-	 homeObj = login.login("admin@fourthfrontier.com", FxUtilities.DecryptPass("YXV0b21hdGlvbjRm"));
+	System.out.println(""+FxUtilities.getOperatingSystemSystemUtils());
+	// this.driver = DecideEnvironment(env);
+	// login = new LoginPageLib(driver);
+	// adminLib = new AdminPageLib(driver);
+	// homeObj = login.login("admin@fourthfrontier.com", FxUtilities.DecryptPass("YXV0b21hdGlvbjRm"));
     }
 	 
 	 @AfterMethod
@@ -59,25 +60,7 @@ private void SetEvidenceDir()
 	public void VerifyHealthEntryAddedAndDeleted() throws Exception
 	
 	{	
-				String DeleteTagNotificationText = "Health Entry Deleted: 1";
-				String ExpectedVal = "SpO2 - 98 %";
-				Thread.sleep(6000);
-					homeObj.ClickOnAddHealtEntry();
-					homeObj.SelectVitals();
-					homeObj.ClickOnsPO2Tag();
-					homeObj.EnterHealthTagDetails("98","Test");
-					Thread.sleep(4000);
-					homeObj.VerifyHealthTagIsDisplayed(ExpectedVal);
-					
-					// Delete the tag and verify the same
-					Thread.sleep(3000);
-					homeObj.clickOnActivityButton();
-					homeObj.ClickOnDeleteTag();
-					Thread.sleep(2000);
-					//homeObj.VerifyDeletePopUpText();
-					Thread.sleep(3000);
-					//homeObj.ClickOnDeleteBtn_Tag();
-					Assert.assertEquals(homeObj.GetNotificationText(),DeleteTagNotificationText);
+				System.out.println("Hello World !!");
 	}
 
 /*
