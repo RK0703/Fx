@@ -57,7 +57,7 @@ assigneeUser="61b8355d0f02490069deb015" # This is my JIRA User ID
 
 # Name of the test result file
 #resultPath="@//Applications/<user-name>/target/junit.xml" #/var/lib/jenkins/workspace/Demo/frontierX
-resultPath="@//var/lib/jenkins/workspace/Demo/frontierX/target/surefire-reports/TEST-TestSuite.xml" 
+resultPath="@//var/lib/jenkins/workspace/Fx SanityTests/frontierX/target/surefire-reports/TEST-TestSuite.xml" 
 mandatoryFields="{\"reporter\":{\"label\":\"Ravikiran HM\",\"name\":\"Ravikiran HM\",\"id\":\"61b8355d0f02490069deb015\"}}"
 #######################################################################
 #  Create an automation task, run it, send test results to Zephyr.
