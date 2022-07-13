@@ -52,7 +52,7 @@ appendDateTimeInCycleName="false"
 # Folder info
 folderName="SanityResults"
 createNewFolder="false"
-appendDateTimeInFolderName="true"
+appendDateTimeInFolderName="false"
 assigneeUser="61b8355d0f02490069deb015" # This is my JIRA User ID
 
 # Name of the test result file
