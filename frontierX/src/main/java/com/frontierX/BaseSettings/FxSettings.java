@@ -73,6 +73,7 @@ public abstract class FxSettings //extends TestListenerAdapter
 			
 			if (FxUtilities.getOperatingSystemSystemUtils().contains("Win"))
 			{
+				System.out.println("Chrome options are being set for "+FxUtilities.getOperatingSystemSystemUtils()+" Environment");
 				driver = new ChromeDriver();
 				driver.manage().window().maximize();
 				driver.get("https://app.fourthfrontier.com/#/login");
@@ -80,6 +81,7 @@ public abstract class FxSettings //extends TestListenerAdapter
 			}
 			else
 			{
+				System.out.println("Chrome options are being set for "+FxUtilities.getOperatingSystemSystemUtils()+" Environment");
 				ChromeOptions options = new ChromeOptions();
 				options.addArguments("start-maximized"); // open Browser in maximized mode
 				options.addArguments("disable-infobars"); // disabling infobars
@@ -88,6 +90,8 @@ public abstract class FxSettings //extends TestListenerAdapter
 				options.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
 				options.addArguments("--no-sandbox"); // Bypass OS security model
 				driver = new ChromeDriver(options);
+				driver.get("https://app.fourthfrontier.com/#/login");
+				driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 			}
 			
 			/*
