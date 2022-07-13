@@ -58,12 +58,13 @@ assigneeUser="61b8355d0f02490069deb015" # This is my JIRA User ID
 # Name of the test result file
 #resultPath="@//Applications/<user-name>/target/junit.xml" #/var/lib/jenkins/workspace/Demo/frontierX
 resultPath="@//var/lib/jenkins/workspace/Demo/frontierX/target/surefire-reports/TEST-TestSuite.xml" 
+mandatoryFields="{\"reporter\":{\"label\":\"Ravikiran HM\",\"name\":\"Ravikiran HM\",\"id\":\"61b8355d0f02490069deb015\"}}"
 #######################################################################
 #  Create an automation task, run it, send test results to Zephyr.
 #  Keep this section as it is.
 #######################################################################
 echo "Creating and running an automation task ..."
-curl -o headers -s -v -H "accessKey: $accessKey" -H "jwt: $jwt" -H "Content-Type: multipart/form-data" -H "Content-Type: application/json" -F "jobName=$taskName" -F "jobDescription=$taskDescription" -F "automationFramework=$automationFramework" -F "projectKey=$projectKey" -F "versionName=$versionName" -F "cycleName=$cycleName" -F "createNewCycle=$createNewCycle" -F "appendDateTimeInCycleName=$appendDateTimeInCycleName" -F "folderName=$folderName" -F "createNewFolder=$createNewFolder" -F "appendDateTimeInFolderName=$appendDateTimeInFolderName" -F "assigneeUser=$assigneeUser" -F "file=$resultPath" -XPOST https://prod-vortexapi.zephyr4jiracloud.com/api/v1/automation/job/saveAndExecute
+curl -o headers -s -v -H "accessKey: $accessKey" -H "jwt: $jwt" -H "Content-Type: multipart/form-data" -H "Content-Type: application/json" -F "jobName=$taskName" -F "jobDescription=$taskDescription" -F "automationFramework=$automationFramework" -F "projectKey=$projectKey" -F "versionName=$versionName" -F "cycleName=$cycleName" -F "createNewCycle=$createNewCycle" -F "appendDateTimeInCycleName=$appendDateTimeInCycleName" -F "folderName=$folderName" -F "createNewFolder=$createNewFolder" -F "mandatoryFields=%$mandatoryFields%" -F "appendDateTimeInFolderName=$appendDateTimeInFolderName" -F "assigneeUser=$assigneeUser" -F "file=$resultPath" -XPOST https://prod-vortexapi.zephyr4jiracloud.com/api/v1/automation/job/saveAndExecute
 result="$(cat  headers | head -n 1)"
 echo "Test results: \n"
 echo $result
