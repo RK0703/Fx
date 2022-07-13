@@ -30,10 +30,10 @@ public class PlayArea extends FxSettings
     private void Initialize(String env)
     {
 	System.out.println(""+FxUtilities.getOperatingSystemSystemUtils());
-	// this.driver = DecideEnvironment(env);
-	// login = new LoginPageLib(driver);
-	// adminLib = new AdminPageLib(driver);
-	// homeObj = login.login("admin@fourthfrontier.com", FxUtilities.DecryptPass("YXV0b21hdGlvbjRm"));
+	 this.driver = DecideEnvironment(env);
+	 login = new LoginPageLib(driver);
+	 adminLib = new AdminPageLib(driver);
+	homeObj = login.login("admin@fourthfrontier.com", FxUtilities.DecryptPass("YXV0b21hdGlvbjRm"));
     }
 	 
 	 @AfterMethod

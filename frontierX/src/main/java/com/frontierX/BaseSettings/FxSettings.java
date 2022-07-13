@@ -5,11 +5,9 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
-import org.testng.ITest;
-import org.testng.ITestResult;
-import org.testng.TestListenerAdapter;
 
 import com.frontierX.Utilities.FxUtilities;
 
@@ -72,10 +70,38 @@ public abstract class FxSettings //extends TestListenerAdapter
 		
 		else if (env.equalsIgnoreCase("production") || env.equalsIgnoreCase("prod")) 
 		{
-			driver = new ChromeDriver();
-			driver.manage().window().maximize();
-			driver.get("https://app.fourthfrontier.com/#/login");
-			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+			
+			if (FxUtilities.getOperatingSystemSystemUtils().contains("Win"))
+			{
+				driver = new ChromeDriver();
+				driver.manage().window().maximize();
+				driver.get("https://app.fourthfrontier.com/#/login");
+				driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+			}
+			else
+			{
+				ChromeOptions options = new ChromeOptions();
+				options.addArguments("start-maximized"); // open Browser in maximized mode
+				options.addArguments("disable-infobars"); // disabling infobars
+				options.addArguments("--disable-extensions"); // disabling extensions
+				options.addArguments("--disable-gpu"); // applicable to windows os only
+				options.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
+				options.addArguments("--no-sandbox"); // Bypass OS security model
+				driver = new ChromeDriver(options);
+			}
+			
+			/*
+			 * 
+			 *  driver = new ChromeDriver();
+				driver.manage().window().maximize();
+				driver.get("https://app.fourthfrontier.com/#/login");
+				driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+			 * 
+			 * 
+			 */
+			
+			
+			
 		}
 		
 		else 

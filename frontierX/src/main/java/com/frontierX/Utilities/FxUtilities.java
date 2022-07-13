@@ -289,7 +289,7 @@ public class FxUtilities
 		{
 		 String os = System.getProperty("os.name");
 		    // System.out.println("Using SystemUtils: " + os);
-		    System.out.println("OS is : "+os);
+		 //   System.out.println("OS is : "+os);
 		    return os;
 		}
 		
