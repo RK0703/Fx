@@ -78,7 +78,7 @@ public class CustomReport implements IReporter
        
         
       //  CopyReportToQAFolderInGoogleDrive(outputDirectory+"\\"+outFilename.toString());
-        CopyReportToCustomeFolder(outputDirectory+"\\"+outFilename.toString());
+      //  CopyReportToCustomeFolder(outputDirectory+"\\"+outFilename.toString());
         /*
         try 
         {
