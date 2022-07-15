@@ -31,7 +31,7 @@ public class LoginPageLib extends LoginPageObj
 	//	Creating Action Methods
 	public HomePageLib login(String usernameValue, String passwordValue) 
 	{
-		WebDriverWait wait = new WebDriverWait(driver, 3);
+		WebDriverWait wait = new WebDriverWait(driver, 10);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("email")));
 		username.sendKeys(usernameValue);
 		password.sendKeys(passwordValue);
