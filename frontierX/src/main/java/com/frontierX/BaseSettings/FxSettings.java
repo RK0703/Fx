@@ -87,7 +87,7 @@ public abstract class FxSettings //extends TestListenerAdapter
 				options.addArguments("start-maximized"); // open Browser in maximized mode
 				options.addArguments("disable-infobars"); // disabling infobars
 				options.addArguments("--disable-extensions"); // disabling extensions
-				options.addArguments("--headless"); // applicable to windows os only
+				options.addArguments("--headless"); // to run in headless mode on ec2 os only
 				options.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
 				 // Bypass OS security model
 				driver = new ChromeDriver(options);
