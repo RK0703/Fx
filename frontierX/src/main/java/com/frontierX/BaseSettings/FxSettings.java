@@ -89,7 +89,7 @@ public abstract class FxSettings //extends TestListenerAdapter
 				options.addArguments("disable-infobars"); // disabling infobars
 				options.addArguments("--disable-extensions"); // disabling extensions
 				options.addArguments("--headless"); // to run in headless mode on ec2 os only
-				options.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
+				//options.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
 				 // Bypass OS security model
 				driver = new ChromeDriver(options);
 				driver.get("https://app.fourthfrontier.com/#/login");
