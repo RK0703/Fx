@@ -77,6 +77,7 @@ public abstract class FxSettings //extends TestListenerAdapter
 				driver = new ChromeDriver();
 				driver.manage().window().maximize();
 				driver.get("https://app.fourthfrontier.com/#/login");
+				System.out.println("Launching Prod Fx Web Page in Win Env");
 				driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 			}
 			else
@@ -92,6 +93,7 @@ public abstract class FxSettings //extends TestListenerAdapter
 				 // Bypass OS security model
 				driver = new ChromeDriver(options);
 				driver.get("https://app.fourthfrontier.com/#/login");
+				System.out.println("Launching Prod Fx Web Page in ubuntu ec2");
 				driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 			}
 			
