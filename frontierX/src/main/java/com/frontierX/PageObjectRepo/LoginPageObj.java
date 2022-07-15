@@ -10,7 +10,7 @@ public class LoginPageObj extends FxBasePage
 {
 
 	//	Creating WebElements
-	@FindBy(xpath = "//input[@id='email']") ////input[@id='email']
+	@FindBy(id = "email")
 	protected WebElement username ;
 	
 	@FindBy(id = "password")

@@ -1,8 +1,11 @@
 package com.frontierX.PageLibRepo;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 import com.frontierX.PageObjectRepo.HomePageObj;
@@ -28,6 +31,8 @@ public class LoginPageLib extends LoginPageObj
 	//	Creating Action Methods
 	public HomePageLib login(String usernameValue, String passwordValue) 
 	{
+		WebDriverWait wait = new WebDriverWait(driver, 3);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("email")));
 		username.sendKeys(usernameValue);
 		password.sendKeys(passwordValue);
 		loginButton.click();
