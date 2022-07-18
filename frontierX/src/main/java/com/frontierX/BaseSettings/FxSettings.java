@@ -106,9 +106,6 @@ public abstract class FxSettings //extends TestListenerAdapter
 			 * 
 			 * 
 			 */
-			
-			
-			
 		}
 		
 		else 

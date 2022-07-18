@@ -393,7 +393,7 @@ public class HomePageLib extends HomePageObj
 	}
 	
 	/*
-	 * Method to verify if user name is displayed on dashboard if admin/doc/FCP is searchinh
+	 * Method to verify if user name is displayed on dashboard if admin/doc/FCP is searching
 	 */
 	public void VerifyUserNameIsDisplayedForUser(String UserName)
 	{

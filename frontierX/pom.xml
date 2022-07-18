@@ -15,34 +15,8 @@
   </properties>
 -->
 
-
-<!-- 
-
 <profiles>
-    <profile>
-        <id>foo</id>
-        <properties>
-             ...
-        </properties>
-        <build>
-             ...
-        </build>
-    </profile>
-    <profile>
-        <id>bar</id>
-        <properties>
-             ...
-        </properties>
-        <build>
-             ...
-        </build>
-    </profile>
-</profiles>
-
--->
-
-<profiles>
-
+<!-- This profile is for Regression tests , we need to pass Regression as Profile ID-->
 <profile>
 <id>Regression</id>
 	<build>
@@ -73,6 +47,7 @@
 </profile>
 
 <profile>
+<!-- This profile is for Sanity tests , we need to pass Sanity as Profile ID-->
 <id>Sanity</id>
 	<build>
 		<plugins>
@@ -102,6 +77,7 @@
 </profile>
 
 <profile>
+<!-- This profile is for Experimental tests , we need to pass SingleTest as Profile ID-->
 <id>SingleTest</id>
 	<build>
 		<plugins>
@@ -181,26 +157,12 @@
 </dependency>
 
 
-
-
-<!--
-<dependency>
-            <groupId>org.apache.maven.surefire</groupId>
-            <artifactId>surefire-testng</artifactId>
-            <version>3.0.0-M2</version>
- </dependency>
- -->
-
 <!-- https://mvnrepository.com/artifact/com.google.code.gson/gson -->
 <dependency>
     <groupId>com.google.code.gson</groupId>
     <artifactId>gson</artifactId>
     <version>2.9.0</version>
 </dependency>
-
-<!-- https://mvnrepository.com/artifact/org.jenkins-ci.plugins/zephyr-for-jira-test-management -->
-
-
 
 
 <!-- https://mvnrepository.com/artifact/com.github.danshannon/javastrava-api -->
@@ -225,17 +187,6 @@
     <version>1.0.0</version>
 </dependency>
 
-<!--
-<dependency> 
-  <groupId>org.apache.maven.plugins</groupId>
-  <artifactId>maven-surefire-plugin</artifactId>
-  <version>3.0.0-M2</version>
-  <type>maven-plugin</type>
-</dependency>
-
--->
-
-
    <dependency>
     <groupId>org.seleniumhq.selenium</groupId>
     <artifactId>selenium-java</artifactId>
@@ -247,7 +198,7 @@
 	<artifactId>webdriver-support</artifactId>
 	<version>0.9.7376</version>
 </dependency>
-<!-- Thanks for using https://jar-download.com -->
+
 <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-support -->
 <dependency>
     <groupId>org.seleniumhq.selenium</groupId>
