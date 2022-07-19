@@ -128,12 +128,7 @@
 					</suiteXmlFiles>
 				<groups>Smoke Tests</groups>
 				</configuration>
-
-
-      </plugin> -->
-
-
-
+</plugin> -->
 <!--
 <plugin>
 		<groupId>org.apache.maven.plugins</groupId>
